@@ -25,7 +25,7 @@ client ──question──> api ──question──> llm
 client <──answer/result── api <──rows/result─────────────────────────────┘
 ```
 
-The ingestion pipeline should retain a clear outcome for every source row: accepted, duplicate, or rejected with a reason. Database writes should be transactional. Analytical queries should use the approved views and remain separate from LLM prompting and HTTP routing.
+The original CSV remains the source of record for imported text. The ingestion pipeline decides which rows are accepted into `orders` and should report rejected rows. Database writes should be transactional. Analytical queries should use the approved views and remain separate from LLM prompting and HTTP routing.
 
 ## Dependency boundaries
 
@@ -33,7 +33,7 @@ The ingestion pipeline should retain a clear outcome for every source row: accep
 - `llm` returns a candidate query. A separate validation step must enforce read-only access to the approved views before execution.
 - `database.query_validation` validates candidate SQL before the database executes it; LLM output is always untrusted input.
 - `ingestion` depends on validation and persistence interfaces, not on FastAPI.
-- `generator` is independently runnable and deterministic when given a seed.
+- `generator` is independently runnable and deterministic when given the same seed and reference date.
 - `database` is the only package that owns SQLite-specific connection and transaction details.
 - API transport schemas and persisted data models are distinct, even if they contain similar fields.
 
@@ -43,4 +43,4 @@ Mirror these responsibilities in tests: generator output and defect options; val
 
 ## Current scope
 
-This change establishes package boundaries and their ownership. It does not implement the generator, ingestion stages, database schema, LLM provider, or API endpoint; those can be added in focused commits while preserving these boundaries.
+The package boundaries and initial `orders` model are in place. The generator, ingestion stages, remaining database schema, LLM provider, and API endpoint are not implemented. First-version assumptions for currency, dates, statuses, and duplicates are recorded in [the data-model notes](data-model.md); implementation should follow those rules.

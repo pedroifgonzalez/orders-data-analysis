@@ -1,2 +1,1 @@
-def main() -> None:
-    print("Hello from orders-data-analysis!")
+"""Tools for generating and analyzing order data."""

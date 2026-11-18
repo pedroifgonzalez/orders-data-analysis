@@ -5,10 +5,12 @@ description = "Add your description here"
 readme = "README.md"
 authors = [{ email = "pedroifgonzalez@gmail.com" }]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "sqlalchemy>=2.0,<3.0",
+]
 
 [project.scripts]
-orders-data-analysis = "orders_data_analysis:main"
+generate-orders = "orders_data_analysis.generator.csv_generator:main"
 
 [build-system]
 requires = ["uv_build>=0.13.9,<0.14.0"]
@@ -17,4 +19,5 @@ build-backend = "uv_build"
 [dependency-groups]
 dev = [
     "pre-commit>=4.7.0",
+    "pytest>=8.0,<10.0",
 ]
