@@ -24,7 +24,7 @@ The model is defined in [`models.py`](../src/orders_data_analysis/database/model
 - The database primary key is not a business key and is not sufficient evidence for duplicate detection.
 - There is no source order identifier in the given input fields. An identifier may be useful as additional evidence, but it would not alone decide whether a row is a duplicate.
 - No customer or product lookup tables are introduced yet; names and labels are not guaranteed unique identities.
-- No ingestion-batch or issue tables are introduced in this draft. The CSV remains available as the original input while validation and rejection reporting are designed.
+- No ingestion-batch or issue tables are introduced in this draft. Rejection counts and reasons are returned by the import report; the source CSV remains the record of the original input.
 
 ## Agreed first-version assumptions
 
@@ -34,7 +34,7 @@ These are the initial business assumptions for the generator and ingestion rules
 
 ### When an order is valid
 
-A source row can be stored as an `Order` when all six source fields are present, its date can be parsed and is not in the future, its amount is numeric, its status is one of the canonical values below, and it is not a duplicate under the rules in this document. Missing text fields are blank after trimming whitespace. Negative and zero amounts remain allowed for now because no contrary business rule has been agreed.
+A source row can be stored as an `Order` when all six source fields are present, its date can be parsed and is not in the future, its amount is numeric and representable as `Numeric(12, 2)` without rounding, its status is one of the canonical values below, and it is not a duplicate under the rules in this document. Missing text fields are blank after trimming whitespace. Negative and zero amounts remain allowed for now because no contrary business rule has been agreed.
 
 ### Amount and currency
 
@@ -57,7 +57,7 @@ The canonical order status values are lowercase English words:
 - `accepted`
 - `rejected`
 
-This is the business status of an order, not the ingestion outcome. A row with status `rejected` may still be structurally valid and stored; a malformed row is excluded regardless of its business status.
+Status is trimmed and compared case-insensitively, then stored in canonical lowercase. This is the business status of an order, not the ingestion outcome. A row with status `rejected` may still be structurally valid and stored; a malformed row is excluded regardless of its business status.
 
 ### Duplicate handling
 
@@ -66,5 +66,6 @@ This is the business status of an order, not the ingestion outcome. A row with s
 - For duplicate comparison, trim surrounding whitespace and compare customer and product without case distinctions.
 - Among eligible rows, keep the earliest source row and drop later matches. Rows that already fail required-field, date, amount, or status validation are rejected before deduplication and cannot suppress a valid row.
 - The database `id` remains only a technical primary key. It is not part of the duplicate decision.
+- Duplicate keys are tracked in a temporary SQLite table across CSV chunks and seeded from existing `orders`, so re-importing the same file does not add those orders again. The table adds no columns to the persisted `orders` model.
 
 This rule is deliberately stricter than exact-row matching: it will drop a second legitimate purchase of the same product by the same customer on the same day. That is accepted as a first-version business assumption.

@@ -1,0 +1,1001 @@
+date,customer,country,product,amount,status
+2026-04-09,Olivia Brown,Germany,Water bottle,1189.90,pending
+2026-04-09,Olivia Brown,Germany,Water bottle,1189.90,pending
+2024-05-25,Liam O'Connor,Portugal,Water bottle,1740.23,accepted
+2024-05-25,Liam O'Connor,Portugal,Water bottle,1740.23,accepted
+2023-09-23,Noah Smith,Austria,Mouse,790.88,accepted
+2023-09-23,Noah Smith,Austria,Mouse,790.88,accepted
+2026-11-03,Fatima Ali,Germany,Keyboard,540.88,accepted
+2026-11-03,Fatima Ali,Germany,Keyboard,540.88,accepted
+2024-08-27,Noah Smith,France,Monitor,2070.59,pending
+2024-08-27,Noah Smith,France,Monitor,2070.59,pending
+2023-12-04,Yuki Tanaka,Netherlands,Laptop stand,2292.03,rejected
+2023-12-04,Yuki Tanaka,Netherlands,Laptop stand,2292.03,rejected
+2025-10-03,Ana López,Germany,Desk lamp,2199.08,accepted
+2025-10-03,Ana López,Germany,Desk lamp,2199.08,accepted
+2025-12-03,Elena García,France,Office chair,1405.21,accepted
+2025-12-03,Elena García,France,Office chair,1405.21,accepted
+2025-01-11,Hugo Bernard,Belgium,Monitor,1638.56,rejected
+2025-01-11,Hugo Bernard,Belgium,Monitor,1638.56,rejected
+2025-11-28,Olivia Brown,Belgium,Notebook,1931.96,pending
+2025-11-28,Olivia Brown,Belgium,Notebook,1931.96,pending
+2024-07-12,Carlos Ruiz,Belgium,Keyboard,2171.65,accepted
+2024-07-12,Carlos Ruiz,Belgium,Keyboard,2171.65,pending
+2022-11-23,Fatima Ali,Germany,Keyboard,2344.30,rejected
+2022-11-23,Fatima Ali,Germany,Keyboard,2344.30,pending
+2025-03-06,Chloé Martin,Italy,Laptop stand,436.63,accepted
+2025-03-06,Chloé Martin,Italy,Laptop stand,436.63,pending
+2023-06-09,Elena García,France,Office chair,583.94,pending
+2023-06-09,Elena García,France,Office chair,583.94,accepted
+2024-09-01,Ana López,Spain,Water bottle,2371.57,rejected
+2024-09-01,Ana López,Spain,Water bottle,2371.57,pending
+2026-11-18,Fatima Ali,Germany,Notebook,801.58,rejected
+2026-11-18,Fatima Ali,Germany,Notebook,801.58,pending
+2024-01-01,Ben Carter,France,USB hub,220.86,rejected
+2024-01-01,Ben Carter,France,USB hub,220.86,pending
+2026-09-28,Sofia Müller,Italy,Water bottle,1629.10,pending
+2026-09-28,Sofia Müller,Italy,Water bottle,1629.10,accepted
+2024-11-27,Carlos Ruiz,Spain,Office chair,448.71,pending
+2024-11-27,Carlos Ruiz,Spain,Office chair,448.71,accepted
+2025-02-02,Isabella Rossi,Belgium,USB hub,1755.70,rejected
+2025-02-02,Isabella Rossi,Belgium,USB hub,1755.70,pending
+,Maya Chen,Ireland,Office chair,912.97,pending
+2026-02,Hugo Bernard,Spain,Desk lamp,2070.98,pending
+2026-02-30,Ava Patel,Ireland,Laptop stand,236.05,accepted
+not-a-date,Theo Janssen,Italy,Laptop stand,558.07,rejected
+,Chloé Martin,Belgium,Desk lamp,2098.25,pending
+2026-02,Alex Morgan,Belgium,USB hub,2261.48,accepted
+2026-02-30,David Kim,Ireland,Laptop stand,2187.68,accepted
+not-a-date,Chloé Martin,Portugal,Mouse,1604.91,rejected
+,Isabella Rossi,Spain,Headphones,239.93,rejected
+2026-02,Liam O'Connor,Ireland,Desk lamp,292.32,rejected
+2026-11-19,Ava Patel,Austria,Laptop stand,23.85,pending
+2026-11-20,Isabella Rossi,Spain,Monitor,1499.41,rejected
+2026-11-21,Fatima Ali,France,Notebook,968.54,pending
+2026-11-22,Maya Chen,Spain,Laptop stand,1997.30,accepted
+2026-11-23,Ana López,Italy,Laptop stand,960.91,rejected
+2026-11-24,Chloé Martin,Netherlands,Keyboard,2398.97,pending
+2026-11-25,Carlos Ruiz,Belgium,Keyboard,272.99,accepted
+2026-11-26,Olivia Brown,Netherlands,USB hub,1313.21,pending
+2026-11-27,Yuki Tanaka,Portugal,Laptop stand,777.14,pending
+2026-11-28,David Kim,Portugal,Laptop stand,239.06,accepted
+2024-06-11,Liam O'Connor,Ireland,Office chair,,pending
+2024-01-08,James Taylor,Italy,USB hub,,pending
+2023-02-13,James Taylor,Italy,USB hub,,rejected
+2024-03-14,James Taylor,Italy,Keyboard,,accepted
+2025-11-11,Emma Wilson,Netherlands,Mouse,,pending
+2024-10-01,Carlos Ruiz,Netherlands,Mouse,,accepted
+2024-11-24,Theo Janssen,Ireland,Keyboard,,rejected
+2025-03-06,Elena García,Belgium,USB hub,,accepted
+2026-03-18,Ava Patel,Portugal,Water bottle,,pending
+2026-04-25,David Kim,Germany,Notebook,,rejected
+2025-05-09,Noah Smith,Austria,Notebook,not-a-number,accepted
+2026-06-26,James Taylor,Belgium,Headphones,not-a-number,pending
+2025-01-20,Emma Wilson,Netherlands,Mouse,not-a-number,pending
+2026-10-16,Ava Patel,Italy,Laptop stand,not-a-number,rejected
+2026-03-26,Carlos Ruiz,Italy,Monitor,not-a-number,accepted
+2025-09-19,Fatima Ali,Portugal,Monitor,not-a-number,pending
+2026-04-29,Ben Carter,Spain,Laptop stand,not-a-number,accepted
+2023-04-08,Hugo Bernard,Belgium,USB hub,not-a-number,pending
+2024-01-25,Elena García,Netherlands,Headphones,not-a-number,accepted
+2024-07-07,Alex Morgan,Belgium,Laptop stand,not-a-number,pending
+2026-03-10,,Ireland,Water bottle,1197.19,accepted
+2026-03-02,,France,Keyboard,1508.36,rejected
+2024-10-30,,Austria,Monitor,241.72,rejected
+2025-08-14,,Ireland,Notebook,1781.53,rejected
+2025-11-07,,Ireland,Laptop stand,583.78,pending
+2026-04-11,,Austria,Notebook,1893.52,accepted
+2024-05-03,,Spain,Keyboard,13.50,rejected
+2023-04-14,,Portugal,Keyboard,1943.80,rejected
+2023-12-22,,Belgium,Monitor,2350.99,pending
+2023-10-26,,France,Desk lamp,1998.55,accepted
+2024-02-07,Isabella Rossi,,USB hub,127.90,accepted
+2025-02-25,Elena García,,Water bottle,124.05,pending
+2025-03-14,Sofia Müller,,Notebook,662.91,pending
+2025-10-16,Sofia Müller,,Headphones,955.33,accepted
+2023-08-27,Theo Janssen,,Notebook,1130.34,accepted
+2023-06-24,Isabella Rossi,,Laptop stand,2107.21,rejected
+2026-03-11,James Taylor,,Notebook,1550.53,accepted
+2026-02-24,Noah Smith,,Desk lamp,1489.10,pending
+2024-05-10,Maya Chen,,Water bottle,2386.58,accepted
+2025-10-09,Ben Carter,,Laptop stand,1119.47,rejected
+2024-10-03,Chloé Martin,Ireland,,1780.54,rejected
+2026-03-03,Elena García,Austria,,1913.03,accepted
+2024-08-17,Sofia Müller,Spain,,221.07,pending
+2024-10-17,Yuki Tanaka,Portugal,,1286.32,accepted
+2026-02-23,Fatima Ali,Portugal,,1765.79,pending
+2026-02-06,Ben Carter,Spain,,1935.61,rejected
+2023-08-09,Carlos Ruiz,Belgium,,290.66,accepted
+2025-08-15,Fatima Ali,Ireland,,2473.04,rejected
+2026-05-12,Yuki Tanaka,Portugal,,890.91,accepted
+2023-08-03,Sofia Müller,Germany,,1903.72,pending
+2022-12-17,Alex Morgan,Netherlands,Monitor,778.92,unknown
+2026-05-12,Carlos Ruiz,Spain,Desk lamp,1269.16,
+2026-02-16,Olivia Brown,Spain,Mouse,2346.65,unknown
+2025-01-27,Chloé Martin,Netherlands,Office chair,362.69,
+2026-05-16,Yuki Tanaka,Ireland,USB hub,2080.61,unknown
+2023-04-08,Ava Patel,Ireland,Headphones,1445.91,
+2026-08-15,Theo Janssen,Belgium,Office chair,2434.09,unknown
+2023-04-13,Maya Chen,Portugal,USB hub,199.41,
+2025-04-27,Noah Smith,Germany,USB hub,1758.68,unknown
+2024-01-15,Alex Morgan,Netherlands,Water bottle,1660.77,
+2023-12-11,Elena García,Germany,Water bottle,395.32,rejected
+2023-06-22,Ava Patel,France,Monitor,393.84,rejected
+2023-02-18,James Taylor,France,Office chair,1785.32,pending
+2023-04-28,Emma Wilson,France,Monitor,1448.99,rejected
+2024-01-31,Maya Chen,France,Monitor,1042.12,pending
+2023-12-26,David Kim,Belgium,Laptop stand,2490.28,rejected
+2026-06-23,James Taylor,Belgium,Mouse,984.34,accepted
+2023-02-14,Isabella Rossi,Netherlands,Headphones,521.51,rejected
+2024-08-14,Ana López,Spain,USB hub,1085.92,pending
+2024-09-17,Olivia Brown,Netherlands,USB hub,2150.40,rejected
+2026-05-17,Fatima Ali,Austria,Laptop stand,418.17,accepted
+2026-07-31,Carlos Ruiz,France,Laptop stand,2287.87,accepted
+2022-11-22,Sofia Müller,Germany,Laptop stand,1936.52,pending
+2024-07-11,Noah Smith,Belgium,Notebook,2160.69,accepted
+2023-11-28,Ana López,Spain,Notebook,1934.94,rejected
+2026-09-11,Yuki Tanaka,Austria,Laptop stand,1175.31,rejected
+2024-01-12,Ben Carter,Germany,Keyboard,592.83,pending
+2023-05-09,Maya Chen,Italy,Monitor,257.44,accepted
+2023-06-29,Hugo Bernard,Germany,Monitor,557.15,rejected
+2023-11-30,Emma Wilson,Spain,Monitor,1898.18,pending
+2025-12-20,Theo Janssen,Germany,Laptop stand,2243.24,rejected
+2026-05-29,Carlos Ruiz,Italy,Headphones,1766.89,pending
+2023-06-25,Hugo Bernard,Portugal,Office chair,1721.27,accepted
+2026-11-08,Ava Patel,France,Office chair,2113.60,rejected
+2024-03-19,David Kim,Ireland,Mouse,1256.60,accepted
+2024-11-14,Fatima Ali,Portugal,USB hub,2036.00,pending
+2024-10-16,Olivia Brown,Austria,Keyboard,318.00,pending
+2025-11-14,Fatima Ali,Italy,Headphones,1434.92,pending
+2024-02-01,David Kim,Netherlands,Mouse,1116.34,accepted
+2025-07-14,Ana López,Netherlands,Mouse,2363.47,rejected
+2023-09-21,Theo Janssen,Spain,Keyboard,528.76,rejected
+2025-01-30,Ben Carter,Netherlands,Monitor,1004.74,rejected
+2024-05-13,Sofia Müller,Spain,Notebook,1465.10,pending
+2026-09-22,Isabella Rossi,France,Water bottle,1849.05,pending
+2023-01-27,Alex Morgan,France,Water bottle,424.39,rejected
+2024-11-12,Noah Smith,Portugal,Headphones,1349.31,rejected
+2025-06-23,Carlos Ruiz,Belgium,Desk lamp,1781.71,accepted
+2026-01-29,Maya Chen,Ireland,Office chair,613.66,accepted
+2023-06-13,Emma Wilson,France,USB hub,2264.26,accepted
+2023-05-02,Sofia Müller,Italy,Notebook,1539.49,rejected
+2023-08-25,Ana López,France,Keyboard,1655.05,rejected
+2024-03-04,Olivia Brown,France,Water bottle,2428.18,pending
+2025-12-17,Noah Smith,Ireland,Mouse,678.63,pending
+2024-07-18,Alex Morgan,Portugal,USB hub,1625.33,accepted
+2023-03-14,Ben Carter,Italy,Keyboard,1651.93,pending
+2026-11-03,Ava Patel,Germany,Laptop stand,1648.46,rejected
+2023-11-06,Noah Smith,Italy,Water bottle,115.79,accepted
+2026-01-09,Chloé Martin,Spain,USB hub,985.19,pending
+2025-05-24,Carlos Ruiz,Netherlands,USB hub,142.36,pending
+2024-09-21,Yuki Tanaka,Portugal,USB hub,1005.39,accepted
+2026-02-10,Fatima Ali,Portugal,Keyboard,105.40,rejected
+2025-08-28,Yuki Tanaka,Spain,Office chair,2496.17,rejected
+2024-07-21,Theo Janssen,Austria,USB hub,1202.46,accepted
+2023-08-01,Chloé Martin,Belgium,Desk lamp,807.46,accepted
+2024-10-24,Fatima Ali,Ireland,Water bottle,531.04,pending
+2024-05-02,Sofia Müller,Spain,Office chair,1686.16,pending
+2023-06-02,Fatima Ali,Belgium,Headphones,313.63,accepted
+2023-04-15,Carlos Ruiz,Belgium,USB hub,1780.07,rejected
+2025-05-31,Emma Wilson,Portugal,Laptop stand,2036.52,rejected
+2024-05-17,Ben Carter,Portugal,Desk lamp,833.53,pending
+2024-01-24,Fatima Ali,Ireland,Water bottle,283.22,pending
+2024-05-30,Theo Janssen,Italy,Keyboard,92.46,pending
+2024-10-15,Alex Morgan,Italy,USB hub,2495.54,pending
+2024-01-30,Theo Janssen,France,Mouse,2257.76,pending
+2026-07-21,James Taylor,Austria,Notebook,436.58,accepted
+2025-08-12,David Kim,Portugal,Notebook,1594.54,rejected
+2023-07-15,Alex Morgan,Ireland,Desk lamp,579.14,accepted
+2026-03-26,James Taylor,Spain,Desk lamp,2030.18,rejected
+2024-05-24,Elena García,Italy,Headphones,1170.74,rejected
+2023-11-17,Chloé Martin,Germany,Laptop stand,2497.66,rejected
+2025-04-19,Ben Carter,Portugal,Headphones,787.43,accepted
+2024-02-14,Fatima Ali,France,Office chair,1426.14,pending
+2024-06-21,Fatima Ali,Portugal,USB hub,295.69,rejected
+2024-03-27,Fatima Ali,Netherlands,Keyboard,88.19,pending
+2023-10-13,Liam O'Connor,Germany,Mouse,2110.31,pending
+2026-03-27,James Taylor,Portugal,Office chair,813.32,rejected
+2026-04-10,David Kim,Spain,USB hub,48.41,rejected
+2026-07-15,Ben Carter,Belgium,Mouse,401.17,rejected
+2024-02-11,Isabella Rossi,Spain,Water bottle,73.90,accepted
+2025-01-22,Noah Smith,Germany,Mouse,481.68,accepted
+2023-04-06,Ava Patel,Germany,USB hub,160.09,rejected
+2025-08-16,Hugo Bernard,Belgium,Mouse,78.89,pending
+2026-05-25,Ben Carter,France,Keyboard,1055.76,accepted
+2025-07-09,David Kim,Italy,Headphones,673.45,accepted
+2023-01-08,Fatima Ali,Austria,Notebook,241.95,pending
+2025-04-21,Maya Chen,Netherlands,Notebook,2011.12,rejected
+2026-08-17,Sofia Müller,Ireland,Keyboard,147.93,rejected
+2024-12-13,James Taylor,France,Headphones,2034.50,rejected
+2024-11-25,James Taylor,Netherlands,Water bottle,1760.47,pending
+2025-07-08,Theo Janssen,Netherlands,USB hub,1147.09,pending
+2025-05-01,Hugo Bernard,Ireland,Monitor,1684.28,rejected
+2025-01-25,Elena García,Austria,Monitor,2458.21,accepted
+2024-03-25,James Taylor,Netherlands,Keyboard,1853.71,accepted
+2022-12-19,Maya Chen,Italy,Desk lamp,1363.44,pending
+2023-11-01,Emma Wilson,Germany,Desk lamp,1076.24,rejected
+2026-03-13,Maya Chen,Austria,Keyboard,116.92,rejected
+2024-04-12,James Taylor,Belgium,Desk lamp,1329.15,pending
+2023-10-10,Ben Carter,France,Monitor,789.80,pending
+2023-11-10,Isabella Rossi,Germany,Headphones,141.53,rejected
+2022-11-28,Alex Morgan,Spain,USB hub,1148.09,rejected
+2024-03-13,James Taylor,Netherlands,Headphones,2226.14,accepted
+2025-05-27,Ana López,Belgium,Keyboard,1222.07,pending
+2024-04-07,Emma Wilson,Portugal,Laptop stand,326.18,pending
+2023-05-24,Alex Morgan,Netherlands,Water bottle,1405.17,rejected
+2025-04-18,Olivia Brown,Italy,USB hub,69.76,rejected
+2024-06-01,Emma Wilson,Germany,Monitor,1224.12,rejected
+2024-03-17,Olivia Brown,France,Desk lamp,1323.19,rejected
+2024-01-07,James Taylor,Germany,Water bottle,739.70,pending
+2023-11-04,Hugo Bernard,Austria,Desk lamp,164.79,rejected
+2026-11-09,Chloé Martin,Netherlands,USB hub,689.47,pending
+2022-12-06,Isabella Rossi,Spain,Water bottle,1865.03,pending
+2026-01-17,Olivia Brown,France,Mouse,1594.27,rejected
+2024-05-07,Ana López,Italy,Monitor,103.58,pending
+2026-01-27,James Taylor,Belgium,Monitor,1976.98,pending
+2024-01-19,Alex Morgan,Spain,Laptop stand,1583.15,rejected
+2024-09-20,Noah Smith,Netherlands,Keyboard,1813.53,pending
+2024-11-26,Ana López,Ireland,Office chair,132.55,rejected
+2026-10-23,Ben Carter,Austria,Notebook,1375.30,pending
+2025-11-24,Yuki Tanaka,Belgium,Monitor,1697.27,pending
+2024-05-01,Liam O'Connor,Spain,Office chair,752.76,pending
+2024-03-06,Yuki Tanaka,Austria,USB hub,2330.66,pending
+2026-09-13,Elena García,Spain,Monitor,725.51,pending
+2025-12-10,Yuki Tanaka,Belgium,Keyboard,1593.31,accepted
+2023-01-12,Hugo Bernard,Portugal,Mouse,355.72,pending
+2024-04-19,Theo Janssen,Austria,Office chair,2355.18,pending
+2026-06-20,Yuki Tanaka,Portugal,Water bottle,1182.20,accepted
+2025-12-13,Noah Smith,Portugal,Laptop stand,1070.39,accepted
+2025-05-04,Maya Chen,France,Desk lamp,738.62,rejected
+2025-08-07,Theo Janssen,Austria,Monitor,1772.63,rejected
+2026-05-09,Ben Carter,France,Headphones,1216.21,pending
+2026-11-04,Olivia Brown,Belgium,USB hub,1520.15,pending
+2023-03-12,Chloé Martin,Belgium,Desk lamp,1946.59,rejected
+2023-02-20,Maya Chen,Ireland,Keyboard,314.91,accepted
+2025-05-28,Fatima Ali,Belgium,Notebook,655.79,rejected
+2023-06-08,Elena García,Netherlands,Keyboard,929.88,rejected
+2025-12-05,Sofia Müller,France,Monitor,2208.68,pending
+2026-06-10,James Taylor,Germany,Office chair,1602.74,rejected
+2026-02-05,Emma Wilson,Belgium,Laptop stand,654.55,rejected
+2023-08-07,James Taylor,Belgium,Water bottle,1736.91,accepted
+2025-03-03,Emma Wilson,Netherlands,Notebook,1873.40,accepted
+2026-04-02,Noah Smith,Belgium,USB hub,636.98,pending
+2024-01-15,Olivia Brown,Spain,Office chair,2176.31,rejected
+2025-09-26,Elena García,Spain,Mouse,1044.74,accepted
+2026-05-01,Theo Janssen,Portugal,Mouse,522.51,accepted
+2023-06-26,Yuki Tanaka,Germany,USB hub,1567.71,accepted
+2026-06-14,Maya Chen,Spain,Mouse,1305.62,pending
+2023-03-15,Elena García,Belgium,Mouse,1269.03,rejected
+2026-03-01,Sofia Müller,France,Keyboard,2306.51,accepted
+2024-09-08,Theo Janssen,Spain,Keyboard,1218.89,accepted
+2023-10-01,Olivia Brown,Ireland,Mouse,194.75,pending
+2025-08-01,Chloé Martin,Austria,Mouse,1617.68,pending
+2025-07-11,Carlos Ruiz,Ireland,Notebook,1888.62,pending
+2024-10-27,Emma Wilson,Germany,Notebook,306.16,rejected
+2022-12-19,James Taylor,France,Water bottle,1740.74,rejected
+2023-11-11,Emma Wilson,Belgium,Headphones,519.93,pending
+2023-10-08,James Taylor,Germany,Keyboard,1138.03,rejected
+2024-07-30,Elena García,Portugal,Water bottle,959.98,accepted
+2023-02-05,Elena García,Netherlands,Headphones,2264.20,rejected
+2024-05-12,Liam O'Connor,Netherlands,Desk lamp,1557.42,rejected
+2026-01-05,Fatima Ali,Belgium,USB hub,207.28,rejected
+2023-10-18,Isabella Rossi,Portugal,Monitor,872.14,accepted
+2026-02-10,Sofia Müller,France,Notebook,18.58,rejected
+2023-08-10,Emma Wilson,Austria,Mouse,2222.77,accepted
+2025-03-24,Liam O'Connor,France,Laptop stand,861.47,pending
+2023-01-13,Fatima Ali,Belgium,Monitor,1322.32,accepted
+2024-03-21,Elena García,Portugal,Monitor,1506.33,pending
+2026-08-28,Noah Smith,Germany,Headphones,578.62,accepted
+2024-08-30,Fatima Ali,Italy,Laptop stand,2287.02,accepted
+2022-11-23,Elena García,Netherlands,Office chair,849.35,pending
+2025-02-02,Ava Patel,Italy,Office chair,445.10,pending
+2025-09-08,Emma Wilson,France,Mouse,1331.14,pending
+2023-11-20,Noah Smith,Italy,USB hub,1678.30,accepted
+2023-03-10,Alex Morgan,Italy,Mouse,586.29,rejected
+2024-03-02,David Kim,Italy,Water bottle,1222.50,pending
+2023-02-16,Olivia Brown,Germany,Laptop stand,2377.88,pending
+2023-11-15,Chloé Martin,Italy,USB hub,397.82,accepted
+2023-12-24,Ava Patel,Belgium,USB hub,45.28,accepted
+2024-12-13,Ava Patel,Spain,Desk lamp,1841.01,pending
+2026-11-13,Ava Patel,Belgium,Water bottle,38.42,rejected
+2026-03-30,Noah Smith,Spain,Mouse,692.74,rejected
+2024-07-26,Isabella Rossi,Portugal,Headphones,1842.22,rejected
+2023-08-18,Ana López,Portugal,Water bottle,1458.10,rejected
+2023-02-15,Olivia Brown,Belgium,Notebook,1847.42,rejected
+2026-01-10,David Kim,Belgium,Notebook,1856.83,accepted
+2025-08-01,James Taylor,France,Keyboard,2096.26,rejected
+2026-04-22,Emma Wilson,Germany,Keyboard,388.89,rejected
+2025-09-20,David Kim,Germany,Mouse,1542.16,pending
+2024-05-27,Emma Wilson,France,Water bottle,2406.42,accepted
+2024-03-29,Emma Wilson,Spain,Keyboard,340.39,rejected
+2023-04-02,Maya Chen,Ireland,Notebook,170.71,pending
+2024-01-04,Theo Janssen,France,Desk lamp,107.73,pending
+2025-03-12,Noah Smith,France,Headphones,708.61,pending
+2025-02-20,Ava Patel,Spain,Office chair,862.99,pending
+2025-06-20,Ava Patel,Portugal,Desk lamp,2193.66,rejected
+2026-04-14,Liam O'Connor,Ireland,Monitor,410.74,rejected
+2023-08-05,Isabella Rossi,Italy,Keyboard,1450.28,accepted
+2024-10-17,Ava Patel,Ireland,Headphones,1804.05,pending
+2025-09-16,Chloé Martin,France,Office chair,2000.42,pending
+2024-03-10,Olivia Brown,Netherlands,Keyboard,451.98,rejected
+2024-08-20,Maya Chen,France,Water bottle,738.03,pending
+2025-08-09,Alex Morgan,Germany,Notebook,589.38,accepted
+2025-11-14,Ava Patel,Portugal,Mouse,2046.94,rejected
+2024-03-02,Theo Janssen,Spain,Water bottle,729.82,accepted
+2023-04-08,Ava Patel,Spain,Notebook,2270.57,accepted
+2025-03-26,Ben Carter,Portugal,Desk lamp,1220.72,rejected
+2025-04-13,Noah Smith,Germany,Headphones,1824.22,pending
+2026-05-25,Maya Chen,Germany,Office chair,736.19,rejected
+2026-05-27,Noah Smith,Belgium,USB hub,1923.65,pending
+2025-03-14,Ben Carter,Austria,Mouse,122.13,rejected
+2024-11-27,Hugo Bernard,France,Office chair,1436.34,rejected
+2026-03-29,David Kim,Portugal,Monitor,1483.41,accepted
+2023-03-28,Olivia Brown,Spain,Mouse,471.12,rejected
+2025-06-08,James Taylor,Germany,Laptop stand,182.08,accepted
+2025-03-31,Emma Wilson,Netherlands,Office chair,1338.97,accepted
+2025-03-08,Emma Wilson,France,Notebook,639.44,accepted
+2024-03-27,James Taylor,France,Keyboard,959.14,pending
+2023-07-31,Chloé Martin,Netherlands,Monitor,2140.04,rejected
+2025-06-02,Theo Janssen,Netherlands,Monitor,1455.47,pending
+2025-02-17,Ben Carter,Spain,Laptop stand,926.81,pending
+2022-12-25,Ben Carter,Netherlands,Keyboard,905.65,accepted
+2025-08-08,Hugo Bernard,Ireland,Monitor,826.77,rejected
+2023-11-30,Theo Janssen,Germany,Keyboard,941.98,pending
+2023-08-24,Emma Wilson,Netherlands,Notebook,1662.80,accepted
+2023-08-09,Theo Janssen,Netherlands,Mouse,1128.11,pending
+2026-11-05,Sofia Müller,Netherlands,Desk lamp,1400.16,pending
+2024-11-09,Elena García,Portugal,Water bottle,664.81,rejected
+2023-03-29,Sofia Müller,France,Monitor,1706.65,accepted
+2025-11-07,Sofia Müller,Portugal,Laptop stand,1982.65,pending
+2026-10-17,David Kim,Belgium,Headphones,635.89,rejected
+2023-05-09,David Kim,Netherlands,Office chair,1514.08,accepted
+2023-10-21,Noah Smith,Spain,Laptop stand,2397.84,pending
+2023-03-21,Yuki Tanaka,Netherlands,Keyboard,437.53,pending
+2026-10-13,Alex Morgan,Germany,Laptop stand,1779.05,rejected
+2023-09-04,David Kim,Italy,Laptop stand,2144.13,rejected
+2026-02-21,Fatima Ali,France,Monitor,2317.49,pending
+2023-11-29,Liam O'Connor,Portugal,Desk lamp,629.34,pending
+2025-01-29,Emma Wilson,France,Desk lamp,1023.11,accepted
+2026-10-15,Ava Patel,Austria,Monitor,1544.73,pending
+2026-08-28,Alex Morgan,Germany,Laptop stand,1982.17,pending
+2024-07-10,Sofia Müller,France,Office chair,962.90,pending
+2023-11-20,Liam O'Connor,Spain,Desk lamp,1333.05,accepted
+2023-07-09,Isabella Rossi,Portugal,Headphones,1245.29,pending
+2026-02-23,Alex Morgan,Spain,Keyboard,558.62,pending
+2025-07-02,Yuki Tanaka,Austria,Water bottle,1522.60,pending
+2024-03-15,Hugo Bernard,Germany,Keyboard,6.79,accepted
+2025-01-16,Fatima Ali,Ireland,Office chair,1737.56,rejected
+2023-02-07,James Taylor,Belgium,Mouse,557.47,accepted
+2025-02-16,Hugo Bernard,Italy,Notebook,2263.33,pending
+2025-12-17,Carlos Ruiz,Netherlands,Headphones,1295.85,accepted
+2023-11-27,Theo Janssen,France,Keyboard,1085.16,pending
+2024-06-05,Emma Wilson,Belgium,Mouse,1635.02,accepted
+2023-03-29,Sofia Müller,Netherlands,Laptop stand,1843.48,accepted
+2025-12-21,Maya Chen,Ireland,Keyboard,1921.58,pending
+2024-10-29,Ana López,Netherlands,Monitor,1869.13,rejected
+2026-03-25,David Kim,Portugal,Headphones,1788.35,rejected
+2025-06-25,Yuki Tanaka,Italy,Keyboard,2197.40,pending
+2025-01-22,Olivia Brown,Portugal,Office chair,1769.73,pending
+2025-10-14,Ben Carter,France,Monitor,1205.25,pending
+2023-09-03,Emma Wilson,Spain,Mouse,304.38,rejected
+2025-11-16,Alex Morgan,Spain,Keyboard,797.37,accepted
+2025-02-27,Ana López,Germany,Water bottle,632.70,pending
+2025-03-23,Carlos Ruiz,Germany,Notebook,1458.35,rejected
+2024-06-09,Theo Janssen,Ireland,Mouse,2169.61,pending
+2025-10-01,Sofia Müller,Ireland,USB hub,2175.42,rejected
+2025-05-24,Elena García,Belgium,Mouse,554.67,accepted
+2024-11-26,Liam O'Connor,Ireland,Desk lamp,1616.79,pending
+2024-11-07,Isabella Rossi,Ireland,Keyboard,52.79,pending
+2023-10-19,Ava Patel,Italy,USB hub,943.69,pending
+2024-07-14,James Taylor,Austria,Water bottle,1065.63,rejected
+2023-03-31,Ana López,Netherlands,Monitor,438.91,rejected
+2025-05-04,Sofia Müller,France,Notebook,164.79,rejected
+2023-08-27,Theo Janssen,Italy,Laptop stand,840.98,accepted
+2026-11-03,Isabella Rossi,Spain,Water bottle,1345.90,rejected
+2026-08-13,Liam O'Connor,Portugal,Headphones,630.05,pending
+2024-10-16,Carlos Ruiz,Spain,Desk lamp,2133.00,rejected
+2025-02-05,Yuki Tanaka,Germany,Water bottle,2419.44,pending
+2026-03-10,Emma Wilson,Portugal,Keyboard,1439.66,pending
+2024-06-20,Carlos Ruiz,Netherlands,USB hub,465.57,rejected
+2023-09-21,Theo Janssen,Portugal,Water bottle,1996.97,rejected
+2024-09-12,Ben Carter,Spain,Desk lamp,1770.01,rejected
+2024-05-26,David Kim,Belgium,Headphones,2259.34,pending
+2024-09-02,Sofia Müller,Belgium,Monitor,1413.11,pending
+2023-12-28,James Taylor,Belgium,Office chair,125.39,accepted
+2024-07-11,Theo Janssen,Austria,Water bottle,1025.99,accepted
+2023-04-28,Noah Smith,Belgium,Office chair,2139.49,accepted
+2025-07-30,Ben Carter,Netherlands,Monitor,2276.43,accepted
+2024-08-02,Maya Chen,France,Mouse,1497.65,rejected
+2023-07-17,Emma Wilson,France,Keyboard,12.43,rejected
+2026-10-31,Theo Janssen,Belgium,Mouse,787.21,accepted
+2024-07-13,Theo Janssen,Spain,Mouse,1728.26,accepted
+2024-07-23,Carlos Ruiz,Belgium,Headphones,397.27,rejected
+2024-11-08,Noah Smith,Portugal,Desk lamp,1637.19,pending
+2023-10-31,Chloé Martin,Netherlands,Notebook,1499.64,accepted
+2024-02-17,Alex Morgan,Ireland,Office chair,273.92,accepted
+2024-07-24,Theo Janssen,Germany,Keyboard,124.84,pending
+2023-03-16,Fatima Ali,Austria,Keyboard,1370.78,rejected
+2023-02-10,Fatima Ali,Austria,Notebook,2120.28,accepted
+2023-04-30,Maya Chen,Portugal,Laptop stand,721.51,accepted
+2024-09-04,Maya Chen,Germany,Laptop stand,1329.99,rejected
+2024-07-14,Elena García,Ireland,Notebook,1601.44,accepted
+2024-07-26,Sofia Müller,Spain,Keyboard,1096.85,accepted
+2025-11-20,Hugo Bernard,Austria,Desk lamp,2413.52,pending
+2026-02-16,Hugo Bernard,Portugal,Office chair,1786.47,accepted
+2022-12-13,Sofia Müller,Belgium,Headphones,2352.50,pending
+2026-09-27,Chloé Martin,Ireland,Headphones,547.51,accepted
+2023-12-03,Isabella Rossi,Belgium,Water bottle,1849.88,pending
+2024-03-01,Elena García,Ireland,Office chair,1647.98,pending
+2023-05-26,Elena García,France,Office chair,404.46,rejected
+2024-05-29,Alex Morgan,Netherlands,Laptop stand,1201.73,rejected
+2025-02-15,Elena García,Netherlands,Monitor,650.33,accepted
+2024-07-27,Chloé Martin,Italy,Notebook,69.97,rejected
+2022-12-14,Liam O'Connor,Belgium,USB hub,364.56,rejected
+2025-10-16,Yuki Tanaka,Spain,USB hub,93.10,rejected
+2022-12-17,Elena García,Netherlands,Headphones,1984.79,rejected
+2023-04-15,Liam O'Connor,Italy,Notebook,1916.78,accepted
+2026-03-31,Ben Carter,France,Office chair,1214.65,rejected
+2023-04-08,Emma Wilson,Portugal,Mouse,1041.66,rejected
+2023-05-11,Olivia Brown,Netherlands,Notebook,1873.11,rejected
+2026-08-29,Ana López,Netherlands,USB hub,2423.48,accepted
+2023-12-13,Yuki Tanaka,Belgium,Notebook,1809.18,rejected
+2026-06-02,Liam O'Connor,Belgium,Notebook,1911.00,rejected
+2023-10-18,James Taylor,Netherlands,Laptop stand,1691.41,pending
+2025-05-21,Carlos Ruiz,Ireland,Office chair,1444.74,rejected
+2024-12-18,James Taylor,France,Headphones,450.92,rejected
+2023-10-19,Maya Chen,Germany,Office chair,75.55,accepted
+2023-10-17,Sofia Müller,Netherlands,Headphones,40.84,pending
+2024-09-25,Liam O'Connor,Austria,Mouse,617.26,rejected
+2023-04-21,Isabella Rossi,Belgium,Laptop stand,2469.91,accepted
+2023-11-10,Isabella Rossi,Spain,USB hub,2302.58,accepted
+2024-10-29,James Taylor,Austria,Water bottle,954.35,pending
+2025-01-02,Yuki Tanaka,France,Monitor,1133.83,accepted
+2024-04-15,Ava Patel,Portugal,USB hub,659.85,pending
+2023-07-28,Elena García,Netherlands,Notebook,185.46,pending
+2025-03-26,Carlos Ruiz,France,Notebook,1192.10,rejected
+2024-06-17,Hugo Bernard,Ireland,Desk lamp,1930.53,pending
+2026-05-03,Sofia Müller,France,Notebook,620.51,accepted
+2023-08-05,Carlos Ruiz,Belgium,USB hub,1852.31,accepted
+2024-08-08,Sofia Müller,Germany,Office chair,1285.77,rejected
+2024-12-26,Theo Janssen,Spain,Laptop stand,60.14,rejected
+2023-08-26,Theo Janssen,Germany,Mouse,1902.32,rejected
+2023-03-05,Ava Patel,Spain,Mouse,976.42,pending
+2024-12-10,Ben Carter,Netherlands,Laptop stand,145.76,pending
+2025-02-16,Chloé Martin,Portugal,USB hub,502.63,accepted
+2023-09-30,Noah Smith,Ireland,Monitor,1459.66,rejected
+2026-07-15,Ben Carter,Italy,Headphones,1186.01,rejected
+2024-01-20,Sofia Müller,Portugal,Keyboard,1123.67,rejected
+2024-08-12,Ava Patel,Belgium,Keyboard,2230.34,accepted
+2026-07-31,Liam O'Connor,Portugal,USB hub,1383.18,pending
+2026-06-20,Isabella Rossi,Ireland,Notebook,1162.96,rejected
+2023-02-25,Liam O'Connor,Austria,Monitor,2472.11,rejected
+2023-11-02,James Taylor,Belgium,Mouse,1412.80,pending
+2025-10-29,Yuki Tanaka,Portugal,USB hub,847.86,pending
+2026-07-20,Carlos Ruiz,France,Laptop stand,731.98,pending
+2026-06-17,Carlos Ruiz,Spain,Desk lamp,2482.39,accepted
+2024-08-25,Fatima Ali,Portugal,Water bottle,841.60,pending
+2024-02-22,Ana López,Belgium,Notebook,663.29,accepted
+2026-10-30,Chloé Martin,Belgium,Office chair,1847.46,accepted
+2026-04-26,Fatima Ali,Spain,Mouse,2064.78,accepted
+2023-03-13,Isabella Rossi,France,Water bottle,1747.45,pending
+2023-01-31,Isabella Rossi,Austria,USB hub,2330.15,rejected
+2025-01-24,Olivia Brown,Ireland,Monitor,275.59,rejected
+2026-02-05,Alex Morgan,Portugal,Monitor,1895.80,accepted
+2026-01-16,Alex Morgan,France,Notebook,1244.90,accepted
+2026-04-14,James Taylor,Italy,Water bottle,626.82,accepted
+2023-04-27,Hugo Bernard,Italy,Keyboard,1642.14,accepted
+2024-02-14,Theo Janssen,Ireland,Office chair,2359.37,pending
+2026-04-12,Carlos Ruiz,Ireland,Mouse,1134.65,accepted
+2023-10-03,James Taylor,Ireland,Monitor,1783.33,rejected
+2024-05-08,Elena García,Netherlands,Mouse,2333.07,accepted
+2024-07-30,Ana López,Belgium,Desk lamp,1229.27,accepted
+2026-09-04,Ava Patel,Italy,Monitor,1197.29,accepted
+2026-08-20,Hugo Bernard,France,Monitor,14.29,pending
+2025-06-28,Chloé Martin,Belgium,Notebook,704.41,pending
+2023-09-30,Theo Janssen,Italy,Mouse,2403.64,accepted
+2024-03-02,Elena García,Ireland,USB hub,509.00,accepted
+2024-05-30,Chloé Martin,Austria,Monitor,898.14,accepted
+2025-07-18,Elena García,Belgium,Notebook,156.79,pending
+2024-10-03,Sofia Müller,Portugal,Desk lamp,993.72,rejected
+2026-08-07,Sofia Müller,Austria,Headphones,1714.55,pending
+2024-07-12,Hugo Bernard,France,Mouse,1194.20,accepted
+2023-08-13,Carlos Ruiz,Italy,Monitor,1744.61,rejected
+2024-05-13,Sofia Müller,Germany,Monitor,618.42,accepted
+2023-06-16,Carlos Ruiz,Belgium,Notebook,316.45,accepted
+2026-03-06,Theo Janssen,Germany,Headphones,2068.01,rejected
+2023-02-22,Maya Chen,Ireland,USB hub,29.63,pending
+2024-07-25,Sofia Müller,Portugal,Keyboard,1452.30,accepted
+2023-01-28,Isabella Rossi,Italy,Office chair,1184.44,pending
+2023-04-16,Ben Carter,Ireland,Notebook,896.74,pending
+2025-04-27,Ava Patel,Ireland,Mouse,2270.84,rejected
+2023-01-19,Chloé Martin,Italy,Laptop stand,1123.47,pending
+2024-08-02,Theo Janssen,Belgium,Keyboard,2163.33,accepted
+2023-05-02,Ava Patel,Spain,Laptop stand,85.36,accepted
+2023-03-20,Carlos Ruiz,Italy,Notebook,2037.13,pending
+2024-03-30,David Kim,Portugal,Mouse,588.09,accepted
+2023-01-08,Carlos Ruiz,France,Desk lamp,777.05,rejected
+2025-10-17,Isabella Rossi,Italy,Keyboard,2379.82,pending
+2024-04-03,Fatima Ali,Netherlands,Monitor,1810.32,rejected
+2026-07-04,James Taylor,Spain,Notebook,233.13,rejected
+2025-12-12,Ben Carter,Belgium,Headphones,1045.83,accepted
+2026-06-05,Elena García,France,USB hub,416.71,pending
+2026-04-15,Fatima Ali,Spain,Water bottle,2287.01,pending
+2026-05-17,Ben Carter,Belgium,Office chair,1142.63,pending
+2023-10-31,Olivia Brown,Spain,Desk lamp,1334.92,accepted
+2025-10-08,David Kim,Ireland,USB hub,1601.46,pending
+2025-05-03,Carlos Ruiz,Netherlands,Desk lamp,1061.37,accepted
+2023-07-31,Alex Morgan,France,Notebook,734.26,accepted
+2024-01-31,Hugo Bernard,Ireland,Office chair,1448.47,rejected
+2023-10-10,Ben Carter,Spain,Headphones,2454.19,accepted
+2026-07-15,Sofia Müller,Spain,Laptop stand,2177.58,rejected
+2025-11-01,Noah Smith,Italy,USB hub,1305.76,accepted
+2024-09-15,Maya Chen,Austria,Desk lamp,1236.22,rejected
+2023-01-17,Ana López,France,Notebook,1857.80,rejected
+2024-10-11,David Kim,Belgium,Water bottle,1044.80,rejected
+2023-09-02,Emma Wilson,Italy,Laptop stand,34.97,pending
+2024-01-29,James Taylor,Spain,Monitor,319.09,accepted
+2024-02-17,Ana López,Italy,Desk lamp,407.62,accepted
+2024-06-04,Carlos Ruiz,Belgium,Laptop stand,96.22,rejected
+2025-08-19,Maya Chen,Italy,USB hub,2218.32,rejected
+2025-06-02,Theo Janssen,Ireland,Desk lamp,473.10,pending
+2025-06-27,Isabella Rossi,Netherlands,Keyboard,1268.34,rejected
+2025-05-17,Ben Carter,Austria,Mouse,1926.34,accepted
+2023-03-29,Ava Patel,Ireland,Notebook,1790.34,rejected
+2025-11-23,Olivia Brown,Portugal,Desk lamp,2112.92,rejected
+2024-04-26,David Kim,Italy,Headphones,2166.51,accepted
+2024-03-01,Alex Morgan,Germany,Keyboard,323.31,accepted
+2026-09-12,Hugo Bernard,Austria,Laptop stand,475.16,rejected
+2023-08-15,Ava Patel,Portugal,Mouse,11.48,pending
+2024-05-04,Yuki Tanaka,Austria,Monitor,1610.09,rejected
+2023-08-03,Ava Patel,Spain,Monitor,1717.68,accepted
+2025-05-11,Ben Carter,Germany,Laptop stand,364.85,pending
+2026-08-16,Noah Smith,Belgium,Office chair,646.84,accepted
+2024-09-14,Yuki Tanaka,France,Water bottle,1101.38,accepted
+2022-11-22,Ava Patel,Austria,Laptop stand,738.54,rejected
+2025-01-09,Elena García,Austria,Office chair,1815.14,accepted
+2023-07-30,Fatima Ali,France,Office chair,1927.11,rejected
+2026-11-16,James Taylor,Ireland,Headphones,1994.48,pending
+2026-03-28,Alex Morgan,Italy,Keyboard,1066.76,rejected
+2025-06-22,Ben Carter,Germany,Mouse,609.34,pending
+2024-10-11,David Kim,Italy,Notebook,1720.85,accepted
+2023-12-11,Theo Janssen,Austria,Keyboard,2310.11,pending
+2025-04-02,Hugo Bernard,Netherlands,Headphones,949.28,pending
+2026-09-15,Hugo Bernard,Belgium,USB hub,2258.48,pending
+2026-04-25,Emma Wilson,Germany,Office chair,2376.82,accepted
+2023-10-27,Ben Carter,Portugal,Water bottle,988.95,rejected
+2022-12-31,Liam O'Connor,Portugal,Keyboard,186.29,rejected
+2026-08-02,Ana López,Germany,Monitor,1762.03,pending
+2025-10-18,Maya Chen,France,Headphones,776.16,pending
+2025-05-18,Fatima Ali,Italy,USB hub,851.37,rejected
+2023-11-11,Hugo Bernard,Ireland,Monitor,446.39,rejected
+2023-04-19,Alex Morgan,Austria,Mouse,1570.38,pending
+2023-06-29,Emma Wilson,Austria,Office chair,367.80,accepted
+2025-04-28,David Kim,Italy,Headphones,412.58,pending
+2026-05-31,Chloé Martin,Ireland,Office chair,2005.46,rejected
+2024-12-18,Sofia Müller,France,Office chair,204.30,accepted
+2026-10-28,Emma Wilson,Germany,USB hub,263.49,rejected
+2025-08-06,Ana López,Italy,Notebook,2159.30,accepted
+2026-09-16,Chloé Martin,Spain,Laptop stand,1247.53,pending
+2025-07-21,Noah Smith,Italy,Mouse,711.23,pending
+2023-09-02,Theo Janssen,Austria,Keyboard,1031.55,rejected
+2024-12-12,Carlos Ruiz,Ireland,Desk lamp,2031.54,accepted
+2022-12-23,Liam O'Connor,France,Monitor,1096.37,accepted
+2023-03-30,Ben Carter,Italy,Office chair,28.07,pending
+2023-04-14,Noah Smith,Germany,Notebook,796.92,accepted
+2025-12-31,Yuki Tanaka,Austria,Headphones,1982.70,accepted
+2024-05-19,Chloé Martin,France,Office chair,422.39,accepted
+2024-01-21,Sofia Müller,Ireland,Water bottle,1185.57,rejected
+2026-02-05,Ana López,Ireland,Office chair,123.87,pending
+2024-04-26,Noah Smith,Spain,USB hub,1487.81,pending
+2026-05-16,Ava Patel,Belgium,Notebook,2185.44,pending
+2025-07-20,Ana López,Netherlands,Water bottle,256.43,rejected
+2023-07-05,Ben Carter,Germany,Notebook,1885.36,accepted
+2025-06-21,Ava Patel,Germany,Monitor,1467.98,accepted
+2024-02-23,Liam O'Connor,Portugal,Desk lamp,301.05,pending
+2023-08-11,Yuki Tanaka,Belgium,Office chair,1526.25,pending
+2024-09-07,Ana López,Germany,Office chair,779.74,accepted
+2023-02-19,Olivia Brown,Italy,Headphones,229.43,rejected
+2024-01-24,Ana López,Belgium,USB hub,2392.37,pending
+2026-03-31,Noah Smith,Portugal,Laptop stand,1267.26,rejected
+2024-02-10,Alex Morgan,Germany,USB hub,1155.73,accepted
+2026-10-08,Alex Morgan,Portugal,Keyboard,2271.57,rejected
+2023-08-31,Olivia Brown,Italy,Notebook,365.95,accepted
+2024-08-30,Yuki Tanaka,Netherlands,Mouse,875.88,accepted
+2026-04-27,Hugo Bernard,Portugal,Headphones,1088.44,rejected
+2025-09-15,Theo Janssen,Italy,Water bottle,2130.20,rejected
+2025-03-17,Theo Janssen,Portugal,Keyboard,2200.39,accepted
+2024-08-04,Hugo Bernard,Belgium,Keyboard,878.74,accepted
+2023-10-22,Alex Morgan,Netherlands,USB hub,146.10,pending
+2024-05-20,Ana López,Portugal,Keyboard,2124.93,rejected
+2024-09-30,Sofia Müller,Italy,Monitor,1227.24,accepted
+2026-08-23,Ava Patel,Netherlands,Laptop stand,1114.85,rejected
+2025-09-08,Carlos Ruiz,Netherlands,Water bottle,1651.47,rejected
+2024-03-17,Isabella Rossi,Ireland,Notebook,20.45,accepted
+2025-06-14,Ben Carter,Belgium,Laptop stand,2032.23,rejected
+2023-07-07,Yuki Tanaka,Ireland,Desk lamp,1577.88,rejected
+2024-01-11,Ana López,Austria,Laptop stand,11.73,pending
+2024-12-22,Olivia Brown,Ireland,Desk lamp,2454.07,accepted
+2026-05-08,David Kim,Portugal,Headphones,7.84,pending
+2025-11-29,Alex Morgan,Germany,Monitor,1580.85,rejected
+2023-04-13,Yuki Tanaka,Germany,Desk lamp,1613.78,rejected
+2025-01-20,Emma Wilson,Spain,Office chair,2250.58,pending
+2025-06-29,Elena García,Ireland,USB hub,1726.93,rejected
+2023-07-28,Theo Janssen,Portugal,Keyboard,1270.30,rejected
+2023-06-01,Theo Janssen,Austria,Headphones,170.77,accepted
+2025-08-19,James Taylor,Italy,Mouse,1358.63,accepted
+2025-04-12,Emma Wilson,Italy,Mouse,619.71,rejected
+2023-02-20,Sofia Müller,Italy,Office chair,1397.33,rejected
+2023-12-22,Theo Janssen,Germany,Office chair,1467.74,accepted
+2024-10-20,Sofia Müller,Netherlands,Water bottle,1762.63,rejected
+2024-01-10,Sofia Müller,Italy,Desk lamp,1052.73,pending
+2024-12-03,Alex Morgan,Netherlands,Desk lamp,2444.17,accepted
+2024-04-12,Theo Janssen,Portugal,Laptop stand,970.40,rejected
+2025-10-25,Ben Carter,Netherlands,Mouse,252.26,accepted
+2023-03-13,James Taylor,Austria,Water bottle,1137.81,pending
+2025-09-21,Maya Chen,Italy,Mouse,1720.98,pending
+2026-10-30,Yuki Tanaka,Belgium,Headphones,1206.36,rejected
+2024-02-01,Fatima Ali,Portugal,Desk lamp,2309.44,pending
+2025-07-24,Emma Wilson,Italy,Monitor,1176.09,rejected
+2026-02-02,Ana López,Austria,Water bottle,328.05,rejected
+2025-11-12,Theo Janssen,Austria,USB hub,1763.92,accepted
+2022-12-09,Yuki Tanaka,Spain,Desk lamp,798.03,rejected
+2023-10-11,Sofia Müller,Ireland,Monitor,1897.77,accepted
+2025-01-15,Fatima Ali,France,Water bottle,1620.70,rejected
+2025-11-07,Ava Patel,Spain,Keyboard,1369.73,accepted
+2023-10-23,David Kim,Portugal,Mouse,1306.16,pending
+2025-09-15,Emma Wilson,Belgium,Water bottle,1761.82,rejected
+2025-06-25,Ben Carter,Italy,USB hub,1753.32,accepted
+2024-07-19,Hugo Bernard,Ireland,Headphones,2405.85,rejected
+2025-10-26,Maya Chen,Belgium,Laptop stand,325.23,rejected
+2024-02-06,Hugo Bernard,Belgium,Laptop stand,373.68,accepted
+2024-06-24,Sofia Müller,Ireland,Keyboard,736.67,pending
+2024-07-23,David Kim,Spain,Headphones,721.09,accepted
+2025-04-29,Fatima Ali,Belgium,USB hub,224.14,pending
+2026-04-09,Chloé Martin,Germany,USB hub,1780.08,pending
+2024-09-28,Chloé Martin,Portugal,Desk lamp,973.36,accepted
+2024-05-29,Liam O'Connor,France,Notebook,827.32,rejected
+2023-07-22,Olivia Brown,Portugal,Desk lamp,597.94,pending
+2024-08-12,Maya Chen,Spain,USB hub,2245.28,pending
+2024-03-21,Emma Wilson,Germany,Monitor,1184.83,rejected
+2024-02-07,Chloé Martin,Belgium,Office chair,2284.12,accepted
+2024-09-23,Carlos Ruiz,Belgium,USB hub,1985.78,rejected
+2024-05-25,Hugo Bernard,Ireland,Notebook,2034.07,rejected
+2023-09-16,Ana López,Portugal,Monitor,2272.72,pending
+2023-06-16,David Kim,Belgium,Notebook,518.59,pending
+2023-07-10,Carlos Ruiz,Belgium,Monitor,1337.32,accepted
+2023-06-18,James Taylor,Italy,Desk lamp,1756.61,accepted
+2023-11-16,Carlos Ruiz,Netherlands,Keyboard,1181.01,accepted
+2024-05-28,Liam O'Connor,Spain,Desk lamp,1451.19,pending
+2024-12-01,Theo Janssen,Belgium,Notebook,1549.15,pending
+2025-06-26,Ben Carter,Portugal,Keyboard,2410.09,accepted
+2024-05-20,Ana López,Ireland,Laptop stand,1281.12,accepted
+2024-04-25,Fatima Ali,Germany,Desk lamp,101.95,pending
+2024-01-21,Emma Wilson,Germany,Headphones,1231.88,accepted
+2026-04-26,Olivia Brown,Ireland,Water bottle,1741.65,rejected
+2023-12-11,Yuki Tanaka,France,Mouse,1375.35,accepted
+2024-12-14,Liam O'Connor,Spain,Keyboard,560.05,pending
+2025-09-08,Hugo Bernard,Italy,Mouse,1743.89,accepted
+2024-06-25,Yuki Tanaka,France,Laptop stand,440.11,pending
+2023-07-13,Hugo Bernard,Netherlands,Desk lamp,2061.35,accepted
+2023-03-18,Chloé Martin,Belgium,Monitor,5.75,accepted
+2025-05-25,Sofia Müller,Netherlands,Keyboard,243.90,accepted
+2025-07-10,Theo Janssen,Belgium,Laptop stand,87.76,pending
+2024-07-05,Noah Smith,Spain,Keyboard,491.94,rejected
+2026-04-13,Sofia Müller,France,Monitor,1951.20,accepted
+2023-07-15,Yuki Tanaka,Ireland,Office chair,138.31,rejected
+2024-08-24,Ben Carter,Italy,Notebook,1095.49,accepted
+2024-05-05,Elena García,Belgium,Laptop stand,717.91,pending
+2024-10-21,Sofia Müller,Belgium,Mouse,1354.98,pending
+2025-06-02,Hugo Bernard,Netherlands,Mouse,2235.61,accepted
+2022-12-21,Liam O'Connor,Germany,Office chair,1393.88,accepted
+2026-09-04,Olivia Brown,Italy,Headphones,335.94,accepted
+2026-02-11,Hugo Bernard,Portugal,USB hub,1875.63,accepted
+2023-07-02,David Kim,Portugal,Mouse,2488.23,pending
+2024-12-13,Carlos Ruiz,Belgium,Notebook,823.13,rejected
+2025-06-15,Elena García,Belgium,Monitor,1255.79,rejected
+2024-10-07,Yuki Tanaka,Austria,Headphones,1770.99,pending
+2025-06-28,Chloé Martin,Italy,Water bottle,2273.35,rejected
+2026-02-12,James Taylor,Spain,USB hub,516.51,rejected
+2024-11-02,Hugo Bernard,Netherlands,Keyboard,2122.33,pending
+2026-01-07,Chloé Martin,France,Office chair,430.32,pending
+2025-03-13,Carlos Ruiz,Portugal,Desk lamp,2252.99,rejected
+2024-08-20,Hugo Bernard,Spain,Water bottle,2065.66,rejected
+2025-09-05,Emma Wilson,Belgium,Water bottle,544.45,pending
+2024-06-10,Ava Patel,France,Desk lamp,1699.92,accepted
+2023-11-09,Maya Chen,Belgium,Water bottle,1299.45,pending
+2025-05-20,Olivia Brown,Belgium,Keyboard,2254.23,accepted
+2025-05-10,Ava Patel,Ireland,Water bottle,1378.25,rejected
+2026-07-02,Maya Chen,Ireland,Monitor,1234.24,rejected
+2023-02-19,Alex Morgan,Netherlands,Keyboard,132.17,rejected
+2024-03-24,Ana López,Germany,Monitor,669.04,accepted
+2026-07-07,James Taylor,Portugal,USB hub,815.78,accepted
+2024-04-22,Theo Janssen,Portugal,Headphones,1169.41,accepted
+2023-03-19,Ava Patel,Portugal,Monitor,409.64,accepted
+2023-03-19,Emma Wilson,Belgium,Mouse,949.85,rejected
+2023-06-03,Elena García,Ireland,Laptop stand,184.36,rejected
+2023-10-13,James Taylor,Netherlands,Keyboard,2472.14,rejected
+2024-02-09,Noah Smith,Netherlands,Office chair,1077.52,accepted
+2023-12-06,Hugo Bernard,France,Water bottle,103.95,accepted
+2025-04-28,Isabella Rossi,Portugal,Office chair,1826.12,accepted
+2025-04-11,Emma Wilson,France,Desk lamp,1796.46,rejected
+2023-09-21,Theo Janssen,Netherlands,USB hub,635.38,accepted
+2023-09-06,Noah Smith,Germany,Office chair,1515.50,accepted
+2023-06-12,Alex Morgan,France,USB hub,148.04,accepted
+2022-11-22,Maya Chen,Austria,Headphones,1291.65,accepted
+2026-09-21,Ana López,Ireland,Laptop stand,217.92,rejected
+2024-12-24,Isabella Rossi,France,Laptop stand,1467.32,rejected
+2026-02-08,Noah Smith,Belgium,Desk lamp,1340.69,pending
+2025-03-28,Isabella Rossi,Netherlands,Keyboard,944.69,pending
+2025-10-28,Ben Carter,Austria,Notebook,2462.36,rejected
+2026-06-08,Ana López,Netherlands,Notebook,1601.53,rejected
+2025-12-28,Fatima Ali,Spain,Notebook,177.01,pending
+2026-06-17,Ava Patel,Netherlands,USB hub,1666.01,rejected
+2024-03-31,James Taylor,Italy,Monitor,119.12,rejected
+2023-09-07,Liam O'Connor,Spain,Monitor,2476.16,accepted
+2024-12-21,Yuki Tanaka,Netherlands,Mouse,1591.41,pending
+2026-04-23,Sofia Müller,Germany,USB hub,1620.09,accepted
+2023-11-12,Sofia Müller,Germany,Office chair,1964.56,pending
+2025-03-03,Chloé Martin,Italy,Keyboard,311.57,rejected
+2026-01-02,Liam O'Connor,Portugal,Water bottle,12.01,accepted
+2026-07-27,Elena García,Netherlands,Mouse,2007.91,pending
+2023-11-22,Olivia Brown,France,Water bottle,249.91,rejected
+2026-08-07,Isabella Rossi,Germany,Monitor,2411.56,accepted
+2025-07-06,Fatima Ali,France,Office chair,973.69,rejected
+2026-03-01,Elena García,Belgium,Monitor,1764.76,rejected
+2023-03-29,Elena García,Belgium,Desk lamp,735.56,rejected
+2023-09-13,Liam O'Connor,France,Laptop stand,168.27,accepted
+2025-11-29,Chloé Martin,Germany,Laptop stand,2492.90,pending
+2023-02-10,Elena García,Germany,Keyboard,818.74,pending
+2023-12-17,James Taylor,France,Keyboard,449.55,accepted
+2026-01-17,Emma Wilson,France,Headphones,2386.34,pending
+2025-06-01,Hugo Bernard,Austria,USB hub,1721.97,rejected
+2025-08-05,Chloé Martin,Belgium,Laptop stand,1175.72,rejected
+2023-03-11,Olivia Brown,France,Office chair,1549.85,pending
+2025-04-01,Elena García,Ireland,Monitor,90.56,rejected
+2026-02-10,Alex Morgan,France,Office chair,1843.93,accepted
+2024-05-13,Noah Smith,Portugal,Keyboard,1594.97,pending
+2025-06-20,Isabella Rossi,Ireland,Notebook,2142.03,pending
+2022-12-15,Theo Janssen,Spain,Notebook,1638.30,pending
+2025-03-11,Olivia Brown,Spain,Laptop stand,543.56,rejected
+2023-05-22,Yuki Tanaka,Austria,Headphones,132.36,rejected
+2025-12-23,Liam O'Connor,Austria,Laptop stand,1701.75,pending
+2023-09-25,Hugo Bernard,Belgium,Notebook,1477.41,accepted
+2025-05-07,Ben Carter,Spain,Notebook,759.42,accepted
+2026-04-11,Alex Morgan,Ireland,Water bottle,1521.98,rejected
+2024-11-09,Hugo Bernard,France,Notebook,2453.22,rejected
+2026-07-26,Olivia Brown,Belgium,Monitor,927.59,accepted
+2024-07-28,Noah Smith,Ireland,Notebook,1823.42,rejected
+2025-04-22,Carlos Ruiz,France,Keyboard,559.47,accepted
+2026-08-13,Hugo Bernard,Ireland,Headphones,2274.63,accepted
+2024-10-06,Ava Patel,Spain,Keyboard,989.73,rejected
+2024-06-14,James Taylor,Portugal,Desk lamp,2158.99,accepted
+2023-11-28,Maya Chen,Spain,Water bottle,778.05,accepted
+2024-05-01,Hugo Bernard,Netherlands,Monitor,861.80,accepted
+2024-08-05,Emma Wilson,Austria,Mouse,2466.67,pending
+2025-03-25,Hugo Bernard,Ireland,Headphones,57.63,pending
+2026-06-07,Chloé Martin,Belgium,Water bottle,2236.74,pending
+2024-05-04,Ana López,France,Office chair,196.29,accepted
+2026-08-17,Carlos Ruiz,France,Mouse,30.35,accepted
+2025-10-17,Theo Janssen,Portugal,Office chair,969.27,accepted
+2026-02-10,David Kim,Spain,Laptop stand,1103.99,rejected
+2025-08-05,Theo Janssen,Portugal,Monitor,559.21,pending
+2025-01-23,Theo Janssen,Belgium,Desk lamp,2041.42,pending
+2023-09-16,Ana López,Italy,USB hub,2056.63,accepted
+2023-03-30,Olivia Brown,Netherlands,Mouse,1136.14,pending
+2025-05-29,Ava Patel,Portugal,Headphones,918.77,pending
+2025-12-16,James Taylor,Austria,Laptop stand,2490.34,pending
+2024-12-24,Ben Carter,Germany,Laptop stand,2103.70,pending
+2025-02-28,Hugo Bernard,Italy,Monitor,1107.24,rejected
+2026-07-15,Elena García,France,Laptop stand,2181.77,accepted
+2025-12-14,Fatima Ali,Ireland,Office chair,2082.82,pending
+2026-08-25,Fatima Ali,Spain,Notebook,832.31,rejected
+2026-03-01,James Taylor,Italy,USB hub,276.46,accepted
+2024-07-24,Theo Janssen,Germany,USB hub,1988.00,pending
+2025-09-27,Olivia Brown,Portugal,Desk lamp,1080.77,rejected
+2024-01-25,Liam O'Connor,France,Headphones,2136.64,pending
+2024-04-03,Carlos Ruiz,Germany,Notebook,202.39,rejected
+2023-01-11,Chloé Martin,Portugal,Headphones,596.35,pending
+2026-09-29,Ben Carter,Ireland,Notebook,1270.55,pending
+2025-07-07,Alex Morgan,Belgium,Notebook,391.84,pending
+2025-11-21,Ana López,Austria,Office chair,826.59,accepted
+2024-04-01,Hugo Bernard,Germany,Mouse,2001.56,accepted
+2025-06-24,Fatima Ali,Germany,Notebook,1202.56,accepted
+2023-01-06,Fatima Ali,Netherlands,Mouse,532.30,accepted
+2024-11-11,Sofia Müller,Ireland,Mouse,1473.92,pending
+2024-07-28,Isabella Rossi,Germany,Water bottle,322.81,rejected
+2023-01-04,Ana López,Germany,Monitor,433.19,accepted
+2024-03-22,Theo Janssen,Germany,Desk lamp,701.07,rejected
+2022-12-29,Alex Morgan,France,Monitor,706.09,rejected
+2024-04-22,David Kim,Portugal,Monitor,665.59,rejected
+2024-10-02,Isabella Rossi,Austria,Keyboard,2047.53,accepted
+2023-05-14,Ben Carter,Ireland,Water bottle,641.61,pending
+2023-04-27,Isabella Rossi,France,Mouse,2191.57,accepted
+2025-02-04,James Taylor,Ireland,Water bottle,430.98,accepted
+2026-01-29,James Taylor,Belgium,Keyboard,1489.57,rejected
+2022-12-28,Alex Morgan,Austria,Mouse,790.03,pending
+2023-11-11,Isabella Rossi,Italy,USB hub,1274.67,rejected
+2024-04-29,Ana López,Portugal,Office chair,983.32,pending
+2025-12-11,Theo Janssen,Austria,Laptop stand,221.71,accepted
+2023-05-27,Carlos Ruiz,Germany,Keyboard,1969.71,pending
+2023-11-23,Sofia Müller,Italy,Monitor,902.38,rejected
+2025-07-13,Emma Wilson,Austria,USB hub,872.42,pending
+2024-04-20,Isabella Rossi,Belgium,Notebook,2186.10,pending
+2025-09-26,Hugo Bernard,Germany,Monitor,1760.64,accepted
+2026-03-30,Ava Patel,Netherlands,Office chair,2160.12,pending
+2022-12-26,Alex Morgan,Ireland,Notebook,1802.62,rejected
+2024-01-06,James Taylor,Germany,Monitor,308.15,pending
+2024-06-29,Maya Chen,Italy,Office chair,441.84,pending
+2026-03-01,Noah Smith,Spain,Keyboard,1734.49,accepted
+2024-10-17,Hugo Bernard,Ireland,Monitor,58.03,accepted
+2025-10-13,Elena García,Netherlands,Water bottle,869.72,pending
+2023-03-20,Noah Smith,Ireland,USB hub,1767.97,pending
+2024-07-24,Ava Patel,Spain,Laptop stand,1021.59,rejected
+2025-03-31,Olivia Brown,Italy,Headphones,1440.73,pending
+2024-01-30,Sofia Müller,Austria,USB hub,1569.31,rejected
+2024-05-01,Yuki Tanaka,Italy,Notebook,1965.14,rejected
+2026-06-20,Chloé Martin,Portugal,Headphones,1190.00,rejected
+2026-01-06,Liam O'Connor,Belgium,Office chair,2326.05,rejected
+2026-04-14,Alex Morgan,Ireland,Office chair,244.91,accepted
+2025-05-15,Sofia Müller,Germany,Mouse,2430.85,pending
+2025-03-03,Yuki Tanaka,Austria,Water bottle,1495.62,rejected
+2026-05-29,Olivia Brown,Italy,Headphones,748.92,pending
+2022-11-21,Maya Chen,Belgium,Headphones,2389.72,accepted
+2024-07-30,Carlos Ruiz,France,Water bottle,1580.06,rejected
+2024-12-31,Ava Patel,Germany,Mouse,1720.56,pending
+2025-08-05,Maya Chen,Italy,Keyboard,653.83,accepted
+2026-09-04,Emma Wilson,Spain,USB hub,1450.97,accepted
+2023-04-27,Maya Chen,France,Notebook,2342.21,pending
+2024-09-15,James Taylor,Netherlands,Mouse,1187.59,pending
+2023-04-05,Ana López,Germany,Office chair,457.35,accepted
+2026-06-06,Carlos Ruiz,Germany,Notebook,367.73,rejected
+2026-04-28,Maya Chen,Austria,Keyboard,1383.74,accepted
+2026-01-09,Chloé Martin,Netherlands,Water bottle,1649.81,pending
+2024-01-07,Chloé Martin,Italy,Office chair,698.42,rejected
+2025-10-26,David Kim,Austria,Water bottle,782.80,rejected
+2026-04-29,David Kim,Germany,Monitor,2489.05,rejected
+2025-07-01,Sofia Müller,Spain,Monitor,1957.94,rejected
+2024-03-13,Chloé Martin,France,Headphones,1661.05,rejected
+2025-01-08,Ava Patel,Belgium,Desk lamp,104.31,pending
+2023-09-21,Alex Morgan,Ireland,Headphones,1676.48,pending
+2024-04-08,Liam O'Connor,Belgium,USB hub,828.21,accepted
+2024-03-01,Olivia Brown,Italy,Desk lamp,1995.96,rejected
+2023-08-27,Elena García,Belgium,Monitor,1803.33,pending
+2024-10-20,Sofia Müller,Germany,Desk lamp,247.38,accepted
+2026-10-02,Elena García,Ireland,Headphones,332.78,pending
+2025-01-06,Alex Morgan,Germany,Laptop stand,799.78,rejected
+2023-10-18,Ana López,Belgium,Monitor,1260.75,accepted
+2023-03-02,Ava Patel,Netherlands,Keyboard,76.04,accepted
+2026-05-29,Sofia Müller,Netherlands,Mouse,816.55,pending
+2023-04-17,Hugo Bernard,Netherlands,Water bottle,2122.38,rejected
+2024-10-07,Hugo Bernard,Germany,Laptop stand,1198.65,rejected
+2023-08-14,Carlos Ruiz,Netherlands,Keyboard,1453.41,pending
+2023-05-22,James Taylor,Belgium,Mouse,1820.88,rejected
+2024-07-04,Isabella Rossi,Ireland,Notebook,1485.24,pending
+2025-12-09,Olivia Brown,Belgium,USB hub,205.22,rejected
+2025-06-22,Yuki Tanaka,Portugal,Laptop stand,537.38,rejected
+2023-11-15,Isabella Rossi,Italy,Laptop stand,495.10,accepted
+2025-04-02,Olivia Brown,Spain,Mouse,1200.18,accepted
+2026-05-18,Elena García,Germany,Desk lamp,152.24,rejected
+2023-05-06,Hugo Bernard,Belgium,Mouse,1701.87,pending
+2025-07-11,Emma Wilson,Germany,Laptop stand,2292.84,pending
+2023-09-05,Yuki Tanaka,France,Headphones,1781.11,accepted
+2025-05-27,Noah Smith,Portugal,Desk lamp,1009.12,pending
+2025-07-20,Fatima Ali,Austria,Notebook,1344.35,accepted
+2026-10-01,Sofia Müller,Italy,Desk lamp,615.78,accepted
+2026-03-27,Isabella Rossi,Spain,Office chair,1999.32,rejected
+2025-11-09,James Taylor,Netherlands,Office chair,303.40,accepted
+2023-09-22,James Taylor,Italy,Notebook,1695.91,pending
+2023-02-25,Isabella Rossi,France,Office chair,673.17,pending
+2026-01-19,Elena García,Italy,Notebook,244.10,rejected
+2023-01-25,Yuki Tanaka,Belgium,USB hub,1983.50,accepted
+2023-07-16,Isabella Rossi,Italy,Notebook,1144.18,rejected
+2026-08-24,Alex Morgan,Portugal,Headphones,1148.52,accepted
+2024-10-27,Isabella Rossi,Austria,Notebook,1432.28,accepted
+2024-01-11,Olivia Brown,Austria,Desk lamp,1057.21,pending
+2024-07-03,Ben Carter,Germany,USB hub,2195.64,rejected
+2024-09-29,Fatima Ali,Portugal,Keyboard,1613.68,pending
+2025-11-23,Theo Janssen,Italy,Mouse,625.10,rejected
+2026-02-26,Liam O'Connor,Netherlands,Notebook,1615.82,accepted
+2023-12-18,Yuki Tanaka,Netherlands,Water bottle,2165.88,pending
+2026-08-28,Chloé Martin,Portugal,USB hub,2005.44,rejected
+2025-02-24,Hugo Bernard,Italy,Desk lamp,2420.75,pending
+2022-12-06,Hugo Bernard,Portugal,Mouse,1286.89,rejected
+2024-04-14,Sofia Müller,Netherlands,USB hub,1770.53,accepted
+2023-11-20,David Kim,Netherlands,Laptop stand,1047.58,accepted
+2024-12-28,Fatima Ali,Germany,Keyboard,2077.94,rejected
+2023-11-22,Hugo Bernard,Portugal,USB hub,1001.17,pending
+2024-10-30,James Taylor,Austria,Water bottle,123.60,rejected
+2023-01-19,David Kim,Portugal,Laptop stand,2443.60,pending
+2024-10-01,Isabella Rossi,Italy,Water bottle,258.53,accepted
+2022-12-16,Olivia Brown,Ireland,USB hub,2328.74,accepted
+2023-03-10,Fatima Ali,Portugal,Desk lamp,1371.95,pending
+2023-09-22,Elena García,Italy,Office chair,1272.80,rejected
+2024-12-19,Noah Smith,Germany,Laptop stand,2489.25,pending
+2023-05-20,Fatima Ali,Italy,Keyboard,1877.71,rejected
+2026-11-12,David Kim,Belgium,Desk lamp,1960.08,accepted
+2026-02-20,Ana López,France,Headphones,1829.96,accepted
+2026-06-10,Fatima Ali,Italy,Water bottle,1452.14,pending
+2024-09-27,Olivia Brown,Netherlands,Keyboard,1323.33,pending
+2023-01-18,Ava Patel,Austria,Headphones,2175.71,accepted
+2024-11-15,Liam O'Connor,Ireland,Keyboard,1849.01,pending
+2025-07-02,Ava Patel,Belgium,Monitor,1874.37,pending
+2026-01-20,Yuki Tanaka,Ireland,Mouse,2191.56,rejected
+2026-08-22,Maya Chen,Spain,Headphones,1917.94,accepted
+2024-04-25,Chloé Martin,Ireland,Water bottle,1623.37,rejected
+2025-08-02,Carlos Ruiz,Austria,Laptop stand,183.17,rejected
+2023-03-15,Yuki Tanaka,France,Mouse,2380.92,pending
+2025-04-03,Fatima Ali,France,Keyboard,2341.57,accepted
+2024-03-24,Olivia Brown,Italy,Notebook,1455.89,rejected
+2026-06-29,David Kim,Italy,Office chair,2364.60,accepted
+2024-02-11,Ava Patel,Spain,Headphones,395.97,rejected
+2022-11-26,Carlos Ruiz,Austria,Keyboard,2462.58,accepted
+2024-04-30,David Kim,Spain,Office chair,2060.91,accepted
+2023-04-19,Alex Morgan,Ireland,Laptop stand,296.84,pending
+2022-12-07,Ana López,Germany,Monitor,187.33,pending
+2026-01-21,Liam O'Connor,Belgium,Laptop stand,2183.53,accepted
+2023-08-04,Maya Chen,Netherlands,Keyboard,1370.60,pending
+2025-04-05,Ben Carter,Austria,Office chair,865.15,rejected
+2023-04-20,James Taylor,Netherlands,USB hub,2356.54,accepted
+2026-05-04,Fatima Ali,Netherlands,Water bottle,137.65,accepted
+2024-04-02,Yuki Tanaka,Austria,Headphones,1180.98,pending
+2026-08-20,Maya Chen,Germany,USB hub,1059.51,pending
+2023-02-04,Olivia Brown,Portugal,Keyboard,565.20,rejected
+2025-03-24,Sofia Müller,Austria,Mouse,539.77,accepted
+2026-10-19,Elena García,Italy,Desk lamp,944.11,pending
+2024-07-27,Olivia Brown,Spain,Desk lamp,930.62,rejected
+2026-06-19,Emma Wilson,Spain,Water bottle,1799.18,rejected
+2024-04-05,Sofia Müller,France,Water bottle,2111.75,pending
+2024-07-05,Fatima Ali,Germany,Monitor,296.46,pending
+2024-09-14,James Taylor,Belgium,Mouse,1607.50,accepted
+2023-11-01,Alex Morgan,Netherlands,Mouse,2088.64,accepted
+2023-10-30,Noah Smith,Italy,Water bottle,2053.48,rejected
+2024-03-18,Maya Chen,Portugal,Mouse,260.91,pending
+2024-12-06,Chloé Martin,Spain,Notebook,315.98,rejected
+2026-04-29,Maya Chen,Austria,Headphones,1646.49,pending
+2025-06-08,Chloé Martin,Spain,Notebook,2423.13,rejected
+2023-05-30,Elena García,Ireland,Office chair,1622.36,accepted
+2026-10-09,Ben Carter,Netherlands,Office chair,131.44,accepted
+2026-07-09,Maya Chen,France,Headphones,523.39,accepted
+2026-03-23,Noah Smith,Germany,Water bottle,1962.89,rejected
+2023-12-13,Emma Wilson,France,Mouse,1360.86,pending
+2026-01-04,Hugo Bernard,Netherlands,Water bottle,1411.11,rejected
+2025-07-07,Sofia Müller,France,Notebook,1202.43,pending
+2025-12-12,Fatima Ali,France,Keyboard,1288.56,accepted
+2024-02-16,Ben Carter,Germany,Keyboard,2254.81,accepted
+2025-08-22,Elena García,Ireland,Water bottle,1065.11,accepted
+2026-01-29,Olivia Brown,Germany,Notebook,1735.70,accepted
+2026-04-23,Elena García,Ireland,Desk lamp,1934.35,accepted
+2026-01-09,Ava Patel,France,Office chair,1997.85,accepted
+2024-05-09,Ana López,Italy,Desk lamp,1628.74,accepted
+2024-06-01,Elena García,Belgium,USB hub,439.12,rejected
+2023-11-04,Ana López,Spain,Desk lamp,1687.46,pending
+2024-10-15,Maya Chen,Germany,Laptop stand,1069.37,accepted
+2024-10-23,Ana López,Germany,USB hub,618.46,accepted
+2024-06-07,James Taylor,Portugal,Notebook,2336.73,accepted
+2024-01-02,Sofia Müller,Ireland,Office chair,680.52,accepted
+2023-03-02,Yuki Tanaka,France,USB hub,631.21,pending
+2026-01-07,Yuki Tanaka,Italy,Water bottle,453.79,pending
+2024-07-12,Liam O'Connor,Portugal,Notebook,441.04,accepted
+2023-12-25,Ben Carter,Germany,Laptop stand,1188.54,pending
+2023-07-11,Noah Smith,Austria,Headphones,854.75,accepted
+2023-11-03,Liam O'Connor,Austria,Laptop stand,1216.04,rejected
+2024-09-09,Sofia Müller,Ireland,Keyboard,2093.68,accepted
+2023-10-15,Hugo Bernard,Spain,Notebook,424.78,accepted
+2024-12-21,Yuki Tanaka,Ireland,USB hub,738.10,pending
+2023-12-16,Emma Wilson,Spain,Office chair,1710.13,accepted
+2026-08-10,Fatima Ali,Ireland,Keyboard,1780.19,pending
+2026-07-26,Olivia Brown,Ireland,Laptop stand,372.35,rejected
+2025-04-18,Liam O'Connor,Italy,Water bottle,1020.58,pending
+2024-03-16,Alex Morgan,Austria,USB hub,1009.84,pending
+2023-05-25,Sofia Müller,Austria,Water bottle,1613.44,rejected
+2026-07-11,Maya Chen,Italy,USB hub,1253.45,rejected
+2025-06-12,Carlos Ruiz,Spain,Water bottle,570.32,rejected
+2026-02-09,David Kim,Spain,Mouse,1364.69,rejected
+2023-06-08,Ana López,Spain,USB hub,1577.37,pending
+2024-01-24,James Taylor,France,Office chair,915.39,pending
+2025-02-07,Sofia Müller,Italy,Laptop stand,461.66,rejected
+2025-02-23,Liam O'Connor,Italy,Notebook,1753.21,rejected
+2024-05-03,Elena García,Ireland,Water bottle,191.59,rejected
+2026-05-07,Carlos Ruiz,Netherlands,Headphones,1329.94,rejected
+2025-08-04,Sofia Müller,Italy,Headphones,1316.40,accepted
+2025-01-10,Maya Chen,Netherlands,Desk lamp,1427.42,pending

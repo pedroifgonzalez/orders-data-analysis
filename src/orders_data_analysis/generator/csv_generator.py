@@ -171,9 +171,7 @@ def generate_orders_csv(
     rng.shuffle(indexes)
 
     exact_sources = indexes[:exact_duplicate_count]
-    business_sources = indexes[
-        exact_duplicate_count:duplicate_source_count
-    ]
+    business_sources = indexes[exact_duplicate_count:duplicate_source_count]
     defect_indexes = indexes[duplicate_source_count:]
     indexes_by_defect = {
         defect: defect_indexes[
