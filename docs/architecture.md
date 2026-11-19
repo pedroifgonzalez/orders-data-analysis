@@ -43,4 +43,4 @@ Mirror these responsibilities in tests: generator output and defect options; val
 
 ## Current scope
 
-The generator and CSV-to-SQLite ingestion path are implemented. The remaining database schema, LLM provider, and API endpoint are not implemented. First-version assumptions for currency, dates, statuses, and duplicates are recorded in [the data-model notes](data-model.md).
+The generator, CSV-to-SQLite ingestion path, and two analytical SQLite views are implemented. The LLM provider and API endpoint are not implemented. The views are described in [the analytics notes](analytics-views.md); first-version assumptions for currency, dates, statuses, and duplicates are recorded in [the data-model notes](data-model.md).

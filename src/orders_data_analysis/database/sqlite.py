@@ -4,6 +4,7 @@ from pathlib import Path
 
 from sqlalchemy import URL, Engine, create_engine
 
+from orders_data_analysis.database.analytics import create_analytical_views
 from orders_data_analysis.database.models import Base
 
 
@@ -20,6 +21,7 @@ def create_sqlite_engine(database_path: str | Path) -> Engine:
 
 
 def initialize_database(engine: Engine) -> None:
-    """Create the mapped tables that do not already exist."""
+    """Create mapped tables and approved analytical views if missing."""
 
     Base.metadata.create_all(engine)
+    create_analytical_views(engine)
