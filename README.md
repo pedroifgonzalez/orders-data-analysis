@@ -92,17 +92,18 @@ a provider-neutral interface for future adapters.
 
 ## Run locally
 
-Install dependencies and load the checked-in sample CSV into SQLite:
+Install dependencies and load the checked-in sample CSV into the local SQLite
+database (`data/orders.csv` → `data/orders.db`):
 
 ```bash
 uv sync
-uv run ingest-orders
+uv run ingest-orders --source data/orders.csv --database data/orders.db
 ```
 
-The importer defaults to `data/orders.csv` and `data/orders.db`. It validates
-and deduplicates rows through the ingestion pipeline, then reports inserted,
-rejected, and duplicate counts. To regenerate the sample first, run
-`uv run generate-orders`.
+The command creates or initializes `data/orders.db`, validates and deduplicates
+rows through the ingestion pipeline, then reports inserted, rejected, and
+duplicate counts. Both paths are the defaults, so `uv run ingest-orders` does
+the same import. To regenerate the sample first, run `uv run generate-orders`.
 
 Configure the OpenAI-compatible LLM adapter. Keep the key in your shell or a
 secret manager; do not add it to the repository:

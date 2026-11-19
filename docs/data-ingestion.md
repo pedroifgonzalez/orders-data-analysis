@@ -32,16 +32,17 @@ All chunks from one file are processed in a single database transaction. A datab
 
 ## Use
 
-The generator's default source file is `data/orders.csv`; a 1,000-row sample is checked in at that path. Regenerate it with `uv run generate-orders` (or pass `--output` to choose another path). The ingestion function accepts an explicit source path, so the default sample is imported as follows:
+The generator's default source file is `data/orders.csv`; a 1,000-row sample is checked in at that path. Regenerate it with `uv run generate-orders` (or pass `--output` to choose another path). Import that default sample into the local SQLite database at `data/orders.db` with:
 
 ```bash
-uv run ingest-orders
+uv run ingest-orders --source data/orders.csv --database data/orders.db
 ```
 
 The command creates or initializes `data/orders.db`, then calls the same
 `ingest_orders_csv` pipeline used by Python callers. It reports rows read,
 inserted, rejected, duplicates, and rejection reasons without printing order
-contents. Override defaults when needed:
+contents. These paths are also the defaults, so the shorter `uv run
+ingest-orders` command performs the same import. Override them when needed:
 
 ```bash
 uv run ingest-orders --source data/orders.csv --database data/orders.db --chunk-size 10000
