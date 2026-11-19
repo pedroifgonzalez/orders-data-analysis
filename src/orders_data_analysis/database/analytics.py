@@ -4,31 +4,33 @@ from sqlalchemy import Engine, text
 
 
 def create_analytical_views(engine: Engine) -> None:
-    """Create the monthly sales and top-customer views if they do not exist.
+    """Create or refresh monthly sales and top-customer views.
 
-    Both views aggregate every structurally valid order stored in ``orders``;
-    order status is retained as business data and is not used as an ingestion
-    outcome or as a filter for these initial reports.
+    Both views include only orders whose business status is ``accepted``.
     """
 
     statements = (
+        "DROP VIEW IF EXISTS sales_by_month_country",
+        "DROP VIEW IF EXISTS top_customers",
         """
-        CREATE VIEW IF NOT EXISTS sales_by_month_country AS
+        CREATE VIEW sales_by_month_country AS
         SELECT
             strftime('%Y-%m', date) AS month,
             country,
             COUNT(*) AS order_count,
             ROUND(SUM(amount), 2) AS total_amount
         FROM orders
+        WHERE status = 'accepted'
         GROUP BY strftime('%Y-%m', date), country
         """,
         """
-        CREATE VIEW IF NOT EXISTS top_customers AS
+        CREATE VIEW top_customers AS
         SELECT
             customer,
             COUNT(*) AS order_count,
             ROUND(SUM(amount), 2) AS total_amount
         FROM orders
+        WHERE status = 'accepted'
         GROUP BY customer
         ORDER BY total_amount DESC, customer ASC
         LIMIT 10

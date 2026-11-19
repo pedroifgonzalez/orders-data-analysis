@@ -79,14 +79,14 @@ def test_sales_by_month_country_view_aggregates_order_totals(tmp_path):
         {
             "month": "2026-01",
             "country": "France",
-            "order_count": 3,
-            "total_amount": 8.3,
+            "order_count": 2,
+            "total_amount": 0.3,
         },
         {
             "month": "2026-01",
             "country": "Spain",
-            "order_count": 2,
-            "total_amount": 15.5,
+            "order_count": 1,
+            "total_amount": 10,
         },
     ]
     engine.dispose()
@@ -137,8 +137,8 @@ def test_top_customers_view_returns_ten_highest_totals(tmp_path):
 
     assert len(rows) == 10
     assert rows[0]["customer"] == "Customer 11"
-    assert rows[0]["total_amount"] == 13
-    assert rows[0]["order_count"] == 2
+    assert rows[0]["total_amount"] == 12
+    assert rows[0]["order_count"] == 1
     assert rows[-1]["customer"] == "Customer 02"
     assert rows[-1]["total_amount"] == 3
     engine.dispose()
@@ -165,4 +165,31 @@ def test_initialize_database_can_be_called_repeatedly(tmp_path):
         )
 
     assert names == ["sales_by_month_country", "top_customers"]
+    engine.dispose()
+
+
+def test_initialize_database_replaces_preexisting_view_definitions(tmp_path):
+    """Check initialization replaces old views so they adopt current rules."""
+
+    engine = create_sqlite_engine(tmp_path / "analytics.db")
+    with engine.begin() as connection:
+        connection.exec_driver_sql(
+            "CREATE TABLE orders (status TEXT, date TEXT, country TEXT, "
+            "customer TEXT, amount NUMERIC)"
+        )
+        connection.exec_driver_sql(
+            "CREATE VIEW top_customers AS "
+            "SELECT customer, SUM(amount) AS total_amount FROM orders "
+            "GROUP BY customer"
+        )
+
+    initialize_database(engine)
+
+    with engine.connect() as connection:
+        sql = connection.exec_driver_sql(
+            "SELECT sql FROM sqlite_master "
+            "WHERE type = 'view' AND name = 'top_customers'"
+        ).scalar_one()
+
+    assert "status = 'accepted'" in sql
     engine.dispose()

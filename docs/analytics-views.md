@@ -15,13 +15,13 @@ Groups stored orders by customer and exposes `customer`, `order_count`, and
 `total_amount`. It returns at most ten customers ordered by total amount
 descending, with customer name ascending as a deterministic tie-breaker.
 
-Both views currently include every structurally valid order stored in the
-database, regardless of its business status (`pending`, `accepted`, or
-`rejected`). In this first version, the views report recorded order amounts;
-they do not interpret order status as a sale outcome. Amounts are assumed to
-be EUR according to the [data model](data-model.md).
+Both views include only orders whose business status is `accepted`. Orders
+with `pending` or `rejected` status remain stored, but are excluded from sales
+and customer purchase totals. Amounts are assumed to be EUR according to the
+[data model](data-model.md).
 
 SQLite's `strftime` is used to derive the monthly grouping key. The view
-definitions are owned by
+definitions are dropped and recreated by
 [`database/analytics.py`](../src/orders_data_analysis/database/analytics.py)
-and are installed by `initialize_database`.
+when `initialize_database` runs, so existing databases pick up changes to the
+view definitions.
