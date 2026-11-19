@@ -69,3 +69,30 @@ Only the `openai-compatible` adapter is included now; selecting another
 provider requires implementing its `SqlGenerator` adapter and registering it
 in `llm/factory.py`. Keep API keys in environment variables or a deployment
 secret store; never commit them to the repository.
+
+## HTTP integration test recordings
+
+The VCR.py integration test records a real request against the configured
+OpenAI-compatible provider, then replays the cassette on later runs. If no
+cassette exists yet, the default test suite skips this one test. For the first
+recording, set `LLM_API_KEY` (or `OPENAI_API_KEY`), `LLM_MODEL`, and
+`ORDERS_VCR_RECORD_MODE=once`, then run:
+
+```bash
+export LLM_API_KEY="..."
+export LLM_MODEL="your-model-name"
+export ORDERS_VCR_RECORD_MODE=once
+uv run pytest tests/test_api_vcr_integration.py -q
+```
+
+That first run sends one real API request and saves the response for later
+offline replay. Normal test runs use `ORDERS_VCR_RECORD_MODE=none`, so they do
+not make external requests. To refresh an existing cassette from the provider,
+set `ORDERS_VCR_RECORD_MODE=all`; this sends a real request and replaces the
+recording.
+
+Before VCR writes a cassette, it removes the request body, filters
+authentication/API-key headers, and reduces the response to the generated SQL
+and content type. The test uses a fixed synthetic question and sample order;
+inspect the cassette before committing it. Real recordings may incur API usage
+charges.

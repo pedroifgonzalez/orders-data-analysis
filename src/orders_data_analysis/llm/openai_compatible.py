@@ -57,7 +57,6 @@ class OpenAICompatibleSqlGenerator:
 
         payload = {
             "model": self.model,
-            "temperature": 0,
             "messages": [
                 {
                     "role": "system",

@@ -226,6 +226,7 @@ def test_openai_compatible_client_sends_question_and_allowed_schema():
     assert observed_request["authorization"] == "Bearer test-token"
     assert "Who are the top customers?" in observed_request["body"]
     body = json.loads(observed_request["body"])
+    assert "temperature" not in body
     assert SCHEMA_DESCRIPTION in body["messages"][0]["content"]
     assert body["messages"][1]["content"] == "Who are the top customers?"
 

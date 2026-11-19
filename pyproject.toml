@@ -24,4 +24,8 @@ build-backend = "uv_build"
 dev = [
     "pre-commit>=4.7.0",
     "pytest>=8.0,<10.0",
+    "vcrpy>=8.4,<10.0",
 ]
+
+[tool.pytest.ini_options]
+markers = ["integration: HTTP integration tests that replay or record VCR cassettes"]
