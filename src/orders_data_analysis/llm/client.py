@@ -1,5 +1,18 @@
-"""Declare the LLM client boundary consumed by the question service.
+"""Provider-neutral contract for natural-language to SQL clients."""
 
-Provider-specific clients, including a future local model endpoint, belong
-behind this boundary so API code does not depend on a vendor or deployment.
-"""
+from typing import Protocol
+
+
+class LLMConfigurationError(RuntimeError):
+    """Raised when required model provider settings are missing or unsupported."""
+
+
+class LLMServiceError(RuntimeError):
+    """Raised when a configured model service fails or returns invalid data."""
+
+
+class SqlGenerator(Protocol):
+    """Interface for provider implementations that return candidate SQL."""
+
+    async def generate_sql(self, question: str) -> str:
+        """Return one candidate SQL query for a natural-language question."""

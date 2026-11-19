@@ -9,5 +9,6 @@ This folder records the conventions and technical choices that guide development
 - [Synthetic CSV generation](data-generation.md): generator choice, row contract, defect profile, and command usage.
 - [CSV ingestion](data-ingestion.md): chunked reading, row validation, duplicate handling, and SQLite writes.
 - [Analytical SQL views](analytics-views.md): monthly sales and top-customer aggregates.
+- [Natural-language questions API](natural-language-api.md): request flow, model settings, SQL safeguards, and API responses.
 - [Commit conventions](technical-decisions/commit-conventions.md): commit message structure and examples.
 - [Pre-commit hooks](technical-decisions/pre-commit-hooks.md): the configured checks, their responsibilities, and how to run them.
