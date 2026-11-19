@@ -3,11 +3,8 @@ from collections import Counter, defaultdict
 from datetime import date
 from decimal import Decimal, InvalidOperation
 
-from orders_data_analysis.generator.csv_generator import (
-    CSV_COLUMNS,
-    ORDER_STATUSES,
-    generate_orders_csv,
-)
+from orders_data_analysis.data_contracts import CSV_COLUMNS, ORDER_STATUSES
+from orders_data_analysis.generator.csv_generator import generate_orders_csv
 
 
 def read_rows(path):

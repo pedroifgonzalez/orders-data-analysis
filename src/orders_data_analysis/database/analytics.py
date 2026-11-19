@@ -4,13 +4,14 @@ from sqlalchemy import Engine, text
 
 
 def create_analytical_views(engine: Engine) -> None:
-    """Create or refresh monthly sales and top-customer views.
+    """Create or refresh accepted-sales, product, and top-customer views.
 
-    Both views include only orders whose business status is ``accepted``.
+    Every view includes only orders whose business status is ``accepted``.
     """
 
     statements = (
         "DROP VIEW IF EXISTS sales_by_month_country",
+        "DROP VIEW IF EXISTS products_by_month",
         "DROP VIEW IF EXISTS top_customers",
         """
         CREATE VIEW sales_by_month_country AS
@@ -34,6 +35,17 @@ def create_analytical_views(engine: Engine) -> None:
         GROUP BY customer
         ORDER BY total_amount DESC, customer ASC
         LIMIT 10
+        """,
+        """
+        CREATE VIEW products_by_month AS
+        SELECT
+            strftime('%Y-%m', date) AS month,
+            product,
+            COUNT(*) AS order_count,
+            ROUND(SUM(amount), 2) AS total_amount
+        FROM orders
+        WHERE status = 'accepted'
+        GROUP BY strftime('%Y-%m', date), product
         """,
     )
     with engine.begin() as connection:

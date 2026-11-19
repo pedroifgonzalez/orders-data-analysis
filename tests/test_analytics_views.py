@@ -144,8 +144,76 @@ def test_top_customers_view_returns_ten_highest_totals(tmp_path):
     engine.dispose()
 
 
+def test_products_by_month_view_lists_only_accepted_products_for_month(tmp_path):
+    """Check monthly product totals include accepted orders and exclude others."""
+
+    engine = create_sqlite_engine(tmp_path / "analytics.db")
+    initialize_database(engine)
+    with Session(engine) as session:
+        session.add_all(
+            [
+                Order(
+                    date=date(2026, 3, 1),
+                    customer="Ada",
+                    country="Spain",
+                    product="Notebook",
+                    amount=Decimal("12.50"),
+                    status="accepted",
+                ),
+                Order(
+                    date=date(2026, 3, 2),
+                    customer="Ben",
+                    country="France",
+                    product="Notebook",
+                    amount=Decimal("7.50"),
+                    status="accepted",
+                ),
+                Order(
+                    date=date(2026, 3, 3),
+                    customer="Cy",
+                    country="Spain",
+                    product="Pen",
+                    amount=Decimal("9.00"),
+                    status="pending",
+                ),
+                Order(
+                    date=date(2026, 4, 1),
+                    customer="Dee",
+                    country="Spain",
+                    product="Water bottle",
+                    amount=Decimal("5.00"),
+                    status="accepted",
+                ),
+            ]
+        )
+        session.commit()
+
+    with engine.connect() as connection:
+        rows = (
+            connection.execute(
+                text(
+                    "SELECT month, product, order_count, total_amount "
+                    "FROM products_by_month WHERE month = '2026-03' "
+                    "ORDER BY product"
+                )
+            )
+            .mappings()
+            .all()
+        )
+
+    assert rows == [
+        {
+            "month": "2026-03",
+            "product": "Notebook",
+            "order_count": 2,
+            "total_amount": 20,
+        }
+    ]
+    engine.dispose()
+
+
 def test_initialize_database_can_be_called_repeatedly(tmp_path):
-    """Check repeated initialization leaves both analytical views usable."""
+    """Check repeated initialization leaves all analytical views usable."""
 
     engine = create_sqlite_engine(tmp_path / "analytics.db")
 
@@ -164,7 +232,11 @@ def test_initialize_database_can_be_called_repeatedly(tmp_path):
             .all()
         )
 
-    assert names == ["sales_by_month_country", "top_customers"]
+    assert names == [
+        "products_by_month",
+        "sales_by_month_country",
+        "top_customers",
+    ]
     engine.dispose()
 
 
@@ -175,7 +247,7 @@ def test_initialize_database_replaces_preexisting_view_definitions(tmp_path):
     with engine.begin() as connection:
         connection.exec_driver_sql(
             "CREATE TABLE orders (status TEXT, date TEXT, country TEXT, "
-            "customer TEXT, amount NUMERIC)"
+            "customer TEXT, product TEXT, amount NUMERIC)"
         )
         connection.exec_driver_sql(
             "CREATE VIEW top_customers AS "

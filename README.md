@@ -38,10 +38,11 @@ the ingestion flow can demonstrate validation and duplicate handling.
 
 ### 2. SQL models
 
-Create two SQL views:
+Create analytical SQL views:
 
 1. Sales by month and country.
 2. The top 10 customers by purchase amount.
+3. Products sold by month.
 
 ### 3. Natural-language API
 
@@ -151,9 +152,12 @@ interaction.
 - Read CSV files in bounded Pandas chunks and validate rows before duplicate
   detection. Exact duplicates and repeated customer/date/product purchases
   are dropped; invalid rows are reported and skipped.
-- Use SQLite for the current database and expose analytics through two views:
-  monthly sales by country and the top ten customers. Both views include only
-  accepted orders.
+- Use SQLite for the current database and expose analytics through views for
+  monthly sales by country, the top ten customers, and products sold by month.
+  All views include only accepted orders.
+- Keep one `orders` table for now. Customers and products remain values on an
+  order instead of separate tables; the current requirements do not need the
+  extra relationships or schema yet.
 - Let the LLM propose SQL, then validate it in the backend. The backend permits
   read-only access to the approved views and applies row and time limits before
   returning results.

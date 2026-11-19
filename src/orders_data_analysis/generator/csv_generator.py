@@ -11,8 +11,8 @@ from datetime import date, datetime, timedelta, timezone
 from decimal import Decimal
 from pathlib import Path
 
-CSV_COLUMNS = ("date", "customer", "country", "product", "amount", "status")
-ORDER_STATUSES = ("pending", "accepted", "rejected")
+from orders_data_analysis.data_contracts import CSV_COLUMNS, ORDER_STATUSES
+
 MIN_ROW_COUNT = 100
 
 CUSTOMERS = (

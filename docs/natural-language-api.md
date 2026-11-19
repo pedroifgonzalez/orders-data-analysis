@@ -10,7 +10,7 @@ it does not make a second LLM call to paraphrase the result.
 
 The model is not given database credentials and cannot execute queries. The
 backend accepts a single read-only `SELECT` that reads only
-`sales_by_month_country` or `top_customers`. SQLite's authorizer also blocks
+`sales_by_month_country`, `top_customers`, or `products_by_month`. SQLite's authorizer also blocks
 base-table reads, writes, unapproved functions, and other database operations.
 Execution is limited to two seconds and 100 returned rows. The response's
 `truncated` flag indicates when more rows matched than the response contains.

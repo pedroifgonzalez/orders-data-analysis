@@ -8,8 +8,9 @@ Keep data generation, ingestion, persistence, and question answering independent
 
 | Package | Responsibility | Must not own |
 | --- | --- | --- |
+| `data_contracts` | Shared CSV column names and allowed order statuses used by generation and ingestion. | CSV I/O, validation, persistence, or application behavior. |
 | `generator` | Create reproducible synthetic order CSVs and configurable intentional defects. | Cleaning, persistence, API behavior, or LLM calls. |
-| `ingestion` | Read CSV files in bounded chunks, validate and normalize rows, deduplicate valid orders, and batch-load them; return an import report. | SQL query policy or HTTP request handling. |
+| `ingestion` | Read CSV files in bounded chunks, validate and normalize rows, deduplicate valid orders, and batch-load them; return an import report. | Owning the shared source schema, SQL query policy, or HTTP request handling. |
 | `database` | Define persisted models, SQLite connections and transactions, repositories, analytical SQL views, and query validation. | CSV generation, API schemas, or provider-specific LLM code. |
 | `llm` | Define the provider-neutral contract and call a configurable OpenAI-compatible endpoint for candidate SQL. | Database connections, HTTP routing, or query execution. |
 | `api` | Validate HTTP input, coordinate question-to-query flow, and shape responses and errors. | CSV processing, SQL validation/execution, or provider-specific request logic. |
@@ -32,7 +33,8 @@ The original CSV remains the source of record for imported text. The ingestion p
 - `api` depends on the `llm` interface and database query service; it does not construct SQL or import a vendor SDK directly.
 - `llm` returns a candidate query. A separate validation step must enforce read-only access to the approved views before execution.
 - `database.query_validation` validates and executes candidate SQL with an SQLite authorizer; LLM output is always untrusted input.
-- `ingestion` depends on validation and persistence interfaces, not on FastAPI.
+- `generator` and `ingestion` depend on `data_contracts`; neither imports the other.
+- `ingestion.validation` owns row validation and normalization; the pipeline owns chunking, duplicate tracking, and persistence orchestration.
 - `generator` is independently runnable and deterministic when given the same seed and reference date.
 - `database` is the only package that owns SQLite-specific connection and transaction details.
 - API transport schemas and persisted data models are distinct, even if they contain similar fields.

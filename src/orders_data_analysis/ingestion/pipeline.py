@@ -4,26 +4,22 @@ from __future__ import annotations
 
 import hashlib
 import json
-import re
 from collections import Counter
 from dataclasses import dataclass
 from datetime import date, datetime, timezone
-from decimal import Decimal, InvalidOperation
+from decimal import Decimal
 from pathlib import Path
 from typing import Any
 
 import pandas as pd
 from sqlalchemy import Engine, insert, select, text
 
+from orders_data_analysis.data_contracts import CSV_COLUMNS
 from orders_data_analysis.database.models import Order
 from orders_data_analysis.database.sqlite import initialize_database
-from orders_data_analysis.generator.csv_generator import CSV_COLUMNS, ORDER_STATUSES
+from orders_data_analysis.ingestion.validation import validate_order_row
 
 DEFAULT_CHUNK_SIZE = 10_000
-DATE_PATTERN = re.compile(r"\d{4}-\d{2}-\d{2}\Z")
-AMOUNT_QUANTUM = Decimal("0.01")
-MAX_ABS_AMOUNT = Decimal("10000000000")
-
 _BATCH_COLUMNS = (
     "source_index",
     "order_date",
@@ -85,78 +81,31 @@ def _exact_fingerprint(values: tuple[str, ...]) -> str:
     return hashlib.sha256(serialized.encode("utf-8")).hexdigest()
 
 
-def _validate_row(
-    raw_values: tuple[Any, ...], source_index: int, reference_date: date
-) -> tuple[dict[str, Any] | None, list[str]]:
-    row = {
-        column: str(value).strip()
-        for column, value in zip(CSV_COLUMNS, raw_values, strict=True)
-    }
-    errors: list[str] = []
+def _stage_order(order: dict[str, Any], source_index: int) -> dict[str, Any]:
+    """Add ingestion-only keys and serialization to a validated order."""
 
-    for field, value in row.items():
-        if not value:
-            errors.append(f"missing_{field}")
-
-    order_date: date | None = None
-    if row["date"]:
-        if not DATE_PATTERN.fullmatch(row["date"]):
-            errors.append("invalid_date")
-        else:
-            try:
-                order_date = date.fromisoformat(row["date"])
-            except ValueError:
-                errors.append("invalid_date")
-            if order_date is not None and order_date > reference_date:
-                errors.append("future_date")
-
-    amount: Decimal | None = None
-    if row["amount"]:
-        try:
-            amount = Decimal(row["amount"])
-            if (
-                not amount.is_finite()
-                or amount.quantize(AMOUNT_QUANTUM) != amount
-                or amount.copy_abs() >= MAX_ABS_AMOUNT
-            ):
-                errors.append("invalid_amount")
-        except InvalidOperation:
-            errors.append("invalid_amount")
-
-    status = row["status"].casefold()
-    if status and status not in ORDER_STATUSES:
-        errors.append("invalid_status")
-
-    if errors:
-        return None, errors
-
-    assert order_date is not None
-    assert amount is not None
-
-    customer = row["customer"]
-    country = row["country"]
-    product = row["product"]
-    amount_text = f"{amount:.2f}"
+    order_date = order["date"].isoformat()
+    amount_text = f"{order['amount']:.2f}"
     exact_values = (
-        order_date.isoformat(),
-        customer,
-        country,
-        product,
+        order_date,
+        order["customer"],
+        order["country"],
+        order["product"],
         amount_text,
-        status,
+        order["status"],
     )
     return {
         "source_index": source_index,
-        "order_date": order_date.isoformat(),
-        "customer": customer,
-        "country": country,
-        "product": product,
+        "order_date": order_date,
+        "customer": order["customer"],
+        "country": order["country"],
+        "product": order["product"],
         "amount_text": amount_text,
-        "status": status,
-        "customer_key": customer.casefold(),
-        "product_key": product.casefold(),
+        "status": order["status"],
+        "customer_key": order["customer"].casefold(),
+        "product_key": order["product"].casefold(),
         "exact_fingerprint": _exact_fingerprint(exact_values),
-    }, []
+    }
 
 
 def _create_temporary_tables(connection: Any) -> None:
@@ -370,13 +319,13 @@ def ingest_orders_csv(
                         chunk.itertuples(index=False, name=None)
                     ):
                         source_index = rows_read + offset + 1
-                        order, errors = _validate_row(values, source_index, as_of)
+                        order, errors = validate_order_row(values, as_of)
                         if errors:
                             rows_rejected += 1
                             rejection_counts.update(errors)
                         else:
                             assert order is not None
-                            valid_rows.append(order)
+                            valid_rows.append(_stage_order(order, source_index))
 
                     rows_read += len(chunk)
                     rows_valid += len(valid_rows)

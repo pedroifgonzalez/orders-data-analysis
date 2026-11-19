@@ -4,14 +4,15 @@ from __future__ import annotations
 
 import httpx
 
-from orders_data_analysis.llm.client import LLMConfigurationError, LLMServiceError
-from orders_data_analysis.settings import Settings
+from orders_data_analysis.llm.client import LLMServiceError
 
-SCHEMA_DESCRIPTION = """Available SQLite views (both include accepted orders only):
+SCHEMA_DESCRIPTION = """Available SQLite views (all include accepted orders only):
 - sales_by_month_country(month TEXT, country TEXT, order_count INTEGER,
   total_amount NUMERIC): monthly totals by country.
 - top_customers(customer TEXT, order_count INTEGER, total_amount NUMERIC):
   top ten customers by total accepted purchase amount.
+- products_by_month(month TEXT, product TEXT, order_count INTEGER,
+  total_amount NUMERIC): products sold each month and their totals.
 
 Only query these views. Do not query the orders table. Return exactly one
 SQLite SELECT statement, without markdown fences or explanations."""
@@ -34,25 +35,6 @@ class OpenAICompatibleSqlGenerator:
         self.base_url = base_url.rstrip("/")
         self.timeout_seconds = timeout_seconds
         self.transport = transport
-
-    @classmethod
-    def from_environment(cls) -> OpenAICompatibleSqlGenerator:
-        """Read settings for this specific adapter from process environment."""
-
-        try:
-            settings = Settings.from_environment()
-        except ValueError as error:
-            raise LLMConfigurationError(str(error)) from error
-        if not settings.llm_api_key:
-            raise LLMConfigurationError("Set LLM_API_KEY or OPENAI_API_KEY.")
-        if not settings.llm_model:
-            raise LLMConfigurationError("Set LLM_MODEL to the model identifier.")
-        return cls(
-            api_key=settings.llm_api_key,
-            model=settings.llm_model,
-            base_url=settings.llm_base_url,
-            timeout_seconds=settings.llm_timeout_seconds,
-        )
 
     async def generate_sql(self, question: str) -> str:
         """Send the question and approved view schema to this provider."""

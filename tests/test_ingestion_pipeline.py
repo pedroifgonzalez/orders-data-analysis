@@ -6,15 +6,13 @@ import pytest
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
+from orders_data_analysis.data_contracts import CSV_COLUMNS
 from orders_data_analysis.database.models import Order
 from orders_data_analysis.database.sqlite import (
     create_sqlite_engine,
     initialize_database,
 )
-from orders_data_analysis.generator.csv_generator import (
-    CSV_COLUMNS,
-    generate_orders_csv,
-)
+from orders_data_analysis.generator.csv_generator import generate_orders_csv
 from orders_data_analysis.ingestion.pipeline import CsvIngestionError, ingest_orders_csv
 
 

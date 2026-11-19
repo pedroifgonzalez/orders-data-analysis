@@ -125,6 +125,24 @@ def test_question_endpoint_returns_results_from_accepted_sales_view(tmp_path):
     engine.dispose()
 
 
+def test_question_endpoint_can_list_products_sold_in_a_month(tmp_path):
+    """Check product questions can query the approved monthly product view."""
+
+    engine = make_engine(tmp_path)
+    generator = FixedSqlGenerator(
+        "SELECT product FROM products_by_month WHERE month = '2026-03' "
+        "ORDER BY product"
+    )
+    app = create_app(engine=engine, sql_generator=generator)
+
+    response = post_question(app, "List me all products sold in March 2026?")
+
+    assert response.status_code == 200
+    assert response.json()["columns"] == ["product"]
+    assert response.json()["rows"] == [{"product": "Book"}]
+    engine.dispose()
+
+
 def test_question_endpoint_explains_when_database_has_no_orders(tmp_path, caplog):
     """Check empty data returns a useful next step and logs no query content."""
 

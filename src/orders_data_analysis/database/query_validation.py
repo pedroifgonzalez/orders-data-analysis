@@ -9,7 +9,9 @@ from typing import Any
 
 from sqlalchemy import Engine
 
-ALLOWED_VIEWS = frozenset({"sales_by_month_country", "top_customers"})
+ALLOWED_VIEWS = frozenset(
+    {"sales_by_month_country", "top_customers", "products_by_month"}
+)
 ALLOWED_FUNCTIONS = frozenset(
     {
         "abs",
