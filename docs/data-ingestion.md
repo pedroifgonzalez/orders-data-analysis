@@ -34,6 +34,26 @@ All chunks from one file are processed in a single database transaction. A datab
 
 The generator's default source file is `data/orders.csv`; a 1,000-row sample is checked in at that path. Regenerate it with `uv run generate-orders` (or pass `--output` to choose another path). The ingestion function accepts an explicit source path, so the default sample is imported as follows:
 
+```bash
+uv run ingest-orders
+```
+
+The command creates or initializes `data/orders.db`, then calls the same
+`ingest_orders_csv` pipeline used by Python callers. It reports rows read,
+inserted, rejected, duplicates, and rejection reasons without printing order
+contents. Override defaults when needed:
+
+```bash
+uv run ingest-orders --source data/orders.csv --database data/orders.db --chunk-size 10000
+```
+
+`ORDERS_CSV_PATH`, `ORDERS_DATABASE_PATH`, and
+`ORDERS_INGESTION_CHUNK_SIZE` set the defaults through the shared settings
+module. `--reference-date YYYY-MM-DD` can pin future-date validation for a
+repeatable import.
+
+The Python API is also available for callers that need an in-process report:
+
 ```python
 from orders_data_analysis.database.sqlite import create_sqlite_engine
 from orders_data_analysis.ingestion.pipeline import ingest_orders_csv

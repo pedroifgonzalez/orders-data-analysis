@@ -117,10 +117,95 @@ def test_question_endpoint_returns_results_from_accepted_sales_view(tmp_path):
     assert generator.question == "How much did we sell in Spain in March?"
     assert response.json() == {
         "question": "How much did we sell in Spain in March?",
+        "message": "Found 1 matching row.",
         "columns": ["month", "country", "total_amount"],
         "rows": [{"month": "2026-03", "country": "Spain", "total_amount": 12.5}],
         "truncated": False,
     }
+    engine.dispose()
+
+
+def test_question_endpoint_explains_when_database_has_no_orders(tmp_path, caplog):
+    """Check empty data returns a useful next step and logs no query content."""
+
+    engine = create_sqlite_engine(tmp_path / "empty-api.db")
+    initialize_database(engine)
+    question = "How much did we sell in Spain in March?"
+    sql = (
+        "SELECT SUM(total_amount) AS total_amount FROM sales_by_month_country "
+        "WHERE month = '2026-03' AND country = 'Spain'"
+    )
+    app = create_app(engine=engine, sql_generator=FixedSqlGenerator(sql))
+
+    response = post_question(app, question)
+
+    assert response.status_code == 200
+    assert response.json() == {
+        "question": question,
+        "message": (
+            "No orders are loaded in the database yet. Load the CSV with "
+            "`uv run ingest-orders` and try again."
+        ),
+        "columns": ["total_amount"],
+        "rows": [],
+        "truncated": False,
+    }
+    assert "reason=database_empty" in caplog.text
+    assert question not in caplog.text
+    assert sql not in caplog.text
+    engine.dispose()
+
+
+@pytest.mark.parametrize(
+    ("status", "country", "expected_message", "expected_reason"),
+    [
+        (
+            "pending",
+            "Spain",
+            "The database contains orders, but none are accepted. Sales reports "
+            "include accepted orders only.",
+            "no_accepted_orders",
+        ),
+        (
+            "accepted",
+            "France",
+            "No accepted sales matched this question. Check the requested filters, "
+            "such as country and month.",
+            "no_matching_sales",
+        ),
+    ],
+)
+def test_question_endpoint_explains_why_no_sales_match(
+    tmp_path, caplog, status, country, expected_message, expected_reason
+):
+    """Check empty results distinguish non-accepted data from unmatched filters."""
+
+    engine = create_sqlite_engine(tmp_path / "no-match-api.db")
+    initialize_database(engine)
+    with Session(engine) as session:
+        session.add(
+            Order(
+                date=date(2026, 3, 5),
+                customer="Ada",
+                country=country,
+                product="Book",
+                amount=Decimal("12.50"),
+                status=status,
+            )
+        )
+        session.commit()
+
+    sql = (
+        "SELECT month, country, total_amount FROM sales_by_month_country "
+        "WHERE month = '2026-03' AND country = 'Spain'"
+    )
+    app = create_app(engine=engine, sql_generator=FixedSqlGenerator(sql))
+
+    response = post_question(app, "How much did we sell in Spain in March?")
+
+    assert response.status_code == 200
+    assert response.json()["message"] == expected_message
+    assert f"reason={expected_reason}" in caplog.text
     engine.dispose()
 
 

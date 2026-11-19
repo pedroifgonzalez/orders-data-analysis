@@ -1,7 +1,7 @@
 [project]
 name = "orders-data-analysis"
 version = "0.1.0"
-description = "Add your description here"
+description = "Ingest, clean, store, and analyze order data with SQLite and a natural-language API."
 readme = "README.md"
 authors = [{ email = "pedroifgonzalez@gmail.com" }]
 requires-python = ">=3.12"
@@ -15,6 +15,7 @@ dependencies = [
 
 [project.scripts]
 generate-orders = "orders_data_analysis.generator.csv_generator:main"
+ingest-orders = "orders_data_analysis.ingestion.cli:main"
 
 [build-system]
 requires = ["uv_build>=0.13.9,<0.14.0"]

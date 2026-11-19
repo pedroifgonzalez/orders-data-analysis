@@ -5,8 +5,8 @@
 `POST /questions` accepts `{"question": "..."}`. The service sends the
 question and the approved view schema to an OpenAI-compatible chat completions
 endpoint. The model returns SQL only. The backend validates and executes that
-SQL, then returns the matching columns and rows as JSON; it does not make a
-second LLM call to paraphrase the result.
+SQL, then returns a short status message and matching columns and rows as JSON;
+it does not make a second LLM call to paraphrase the result.
 
 The model is not given database credentials and cannot execute queries. The
 backend accepts a single read-only `SELECT` that reads only
@@ -30,7 +30,14 @@ optionally selects another compatible endpoint. The default base URL is
 `https://api.openai.com/v1`. The database defaults to `data/orders.db` and can
 be changed with `ORDERS_DATABASE_PATH`.
 
+`orders_data_analysis.settings.Settings` reads shared runtime configuration.
+In addition to the variables above, `LOG_LEVEL` controls application log
+verbosity, `LLM_TIMEOUT_SECONDS` sets the provider timeout, and
+`QUERY_TIMEOUT_SECONDS` / `QUERY_MAX_ROWS` control bounded database execution.
+The CSV importer uses `ORDERS_CSV_PATH` and `ORDERS_INGESTION_CHUNK_SIZE`.
+
 ```bash
+uv run ingest-orders
 export LLM_API_KEY="..."
 export LLM_PROVIDER="openai-compatible"
 export LLM_MODEL="your-model-name"
@@ -48,6 +55,7 @@ Example response:
 ```json
 {
   "question": "How much did we sell in Spain in March 2026?",
+  "message": "Found 1 matching row.",
   "columns": ["month", "country", "total_amount"],
   "rows": [
     {"month": "2026-03", "country": "Spain", "total_amount": 1250.5}
@@ -55,6 +63,27 @@ Example response:
   "truncated": false
 }
 ```
+
+When no rows match, `message` explains the likely cause. For an empty database,
+it directs the user to load the CSV with `uv run ingest-orders`. If orders are
+present, it distinguishes the absence of accepted orders from filters that
+match no accepted sales.
+
+For example, an empty database returns:
+
+```json
+{
+  "question": "How much did we sell in Spain in March 2026?",
+  "message": "No orders are loaded in the database yet. Load the CSV with `uv run ingest-orders` and try again.",
+  "columns": ["month", "country", "total_amount"],
+  "rows": [],
+  "truncated": false
+}
+```
+
+The API logs request outcomes, row counts, elapsed time, and safe failure
+categories. It omits question text, generated SQL, row contents, and
+credentials.
 
 ## Error responses
 

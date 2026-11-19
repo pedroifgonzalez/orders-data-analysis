@@ -2,11 +2,10 @@
 
 from __future__ import annotations
 
-import os
-
 import httpx
 
 from orders_data_analysis.llm.client import LLMConfigurationError, LLMServiceError
+from orders_data_analysis.settings import Settings
 
 SCHEMA_DESCRIPTION = """Available SQLite views (both include accepted orders only):
 - sales_by_month_country(month TEXT, country TEXT, order_count INTEGER,
@@ -40,16 +39,19 @@ class OpenAICompatibleSqlGenerator:
     def from_environment(cls) -> OpenAICompatibleSqlGenerator:
         """Read settings for this specific adapter from process environment."""
 
-        api_key = os.getenv("LLM_API_KEY") or os.getenv("OPENAI_API_KEY")
-        model = os.getenv("LLM_MODEL")
-        if not api_key:
+        try:
+            settings = Settings.from_environment()
+        except ValueError as error:
+            raise LLMConfigurationError(str(error)) from error
+        if not settings.llm_api_key:
             raise LLMConfigurationError("Set LLM_API_KEY or OPENAI_API_KEY.")
-        if not model:
+        if not settings.llm_model:
             raise LLMConfigurationError("Set LLM_MODEL to the model identifier.")
         return cls(
-            api_key=api_key,
-            model=model,
-            base_url=os.getenv("LLM_BASE_URL", "https://api.openai.com/v1"),
+            api_key=settings.llm_api_key,
+            model=settings.llm_model,
+            base_url=settings.llm_base_url,
+            timeout_seconds=settings.llm_timeout_seconds,
         )
 
     async def generate_sql(self, question: str) -> str:
