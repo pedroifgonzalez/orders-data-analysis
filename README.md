@@ -3,6 +3,14 @@
 ## Contents
 
 - [Given task](#given-task)
+  - [Requirements](#requirements)
+    - [Data ingestion and cleaning](#1-data-ingestion-and-cleaning)
+    - [SQL models](#2-sql-models)
+    - [Natural-language API](#3-natural-language-api)
+    - [Tests](#4-tests)
+  - [Project decisions and reflection](#project-decisions-and-reflection)
+  - [LLM and credentials](#llm-and-credentials)
+  - [Delivery](#delivery)
 - [Run locally](#run-locally)
 - [Implementation decisions](#implementation-decisions)
 - [What I would improve with more time](#what-i-would-improve-with-more-time)
@@ -16,6 +24,70 @@ Build a Python project that generates and cleans order data, stores valid
 orders in a database, provides SQL analytics, and answers natural-language
 questions through an API. The sample CSV includes intentional data defects so
 the ingestion flow can demonstrate validation and duplicate handling.
+
+## Requirements
+
+### 1. Data ingestion and cleaning
+
+- Generate a CSV containing at least **1,000 orders**.
+- Include these fields: date, customer, country, product, amount, and status.
+- Include intentional data-quality issues: duplicate rows, malformed dates,
+  and missing amounts.
+- Write a script that cleans the data and saves it to **PostgreSQL, SQLite, or
+  DuckDB**.
+
+### 2. SQL models
+
+Create two SQL views:
+
+1. Sales by month and country.
+2. The top 10 customers by purchase amount.
+
+### 3. Natural-language API
+
+Use **FastAPI** to expose an endpoint that accepts a natural-language question,
+such as:
+
+> How much did we sell in Spain in March?
+
+The endpoint must use an LLM to translate the question into a query. Before
+execution, validate that the query is read-only and accesses only permitted
+tables. Return a clear error if the LLM fails or produces an invalid query.
+
+### 4. Tests
+
+Include at least three pytest tests covering:
+
+- Data cleaning.
+- Query validation.
+- The API endpoint with a mocked LLM.
+
+## Project decisions and reflection
+
+Document:
+
+- How to run the project.
+- The decisions made during implementation.
+- What could be improved with more time.
+- How AI was used: what you asked it, what suggestions you accepted, and what
+  you corrected.
+
+These points are covered in the sections below.
+
+## LLM and credentials
+
+Any LLM provider may be used, including OpenAI, Claude, Gemini, or a local
+model. **Do not commit API keys or other secrets to the repository.** This
+implementation currently includes an OpenAI-compatible adapter; the API uses
+a provider-neutral interface for future adapters.
+
+## Delivery
+
+- Make commits as you work so the progress and thought process are visible. A
+  single commit containing the entire project is not acceptable.
+- Submit a link to a public GitHub repository within **48 hours** and report
+  how long the work took.
+- If the submission is successful, a 30-minute meeting will be scheduled.
 
 ## Run locally
 
